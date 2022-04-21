@@ -1,0 +1,37 @@
+
+.btn:hover{
+    background-color: #A5D1A3;
+
+}
+nav{
+    background-color:#F0FDEE!important;
+    margin-top:40px ;
+    
+}
+.btn {
+    display: block !important;
+}
+.logoouar{
+    height: 100px;
+    padding:20px 0px 0px 120px ;
+ 
+}
+.Titre {
+    height: 100px;
+    padding:20px 160px 0px 200px
+}
+.logowiz{
+padding: 20px 40px 0px 0px;
+}
+li{
+    font-family: "Montserrat", sans-serif;
+    font-weight:500 ;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+    display:inline-block ;
+}
+nav ul{
+    text-align: center;
+}
+
