@@ -12,4 +12,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
+
+  images = ['../../assets/1.jpg','../../assets/2.jpg','../../assets/3.jpg'];
 }
+
+
