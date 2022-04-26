@@ -5,11 +5,12 @@ img{
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 500px;
+  height: 500px ;
 }
 body{
   overflow: hidden;
   font-family: 'PT Sans', sans-serif;
+  height: inherit;
 }
 
 .section-container{
@@ -47,5 +48,7 @@ body{
   margin-bottom: 15px;
   text-align: justify;
 }
-
+#Faiza{
+  margin-top:-40px;
+}
 
