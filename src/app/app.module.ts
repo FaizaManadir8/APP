@@ -10,6 +10,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AprposComponent } from './aprpos/aprpos.component';
 import { ContacteznousComponent } from './contacteznous/contacteznous.component';
 import { SeconnecterComponent } from './seconnecter/seconnecter.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { FontAwesomeModule ,FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faB, faR, fas, faS} from '@fortawesome/free-solid-svg-icons';
+
+
 
 @NgModule({
   declarations: [
@@ -24,9 +34,21 @@ import { SeconnecterComponent } from './seconnecter/seconnecter.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor( library :FaIconLibrary){
+    library.addIconPacks( fas,)
+
+  }
+ }
