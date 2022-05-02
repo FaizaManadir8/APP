@@ -21,6 +21,8 @@ import { faB, faR, fas, faS} from '@fortawesome/free-solid-svg-icons';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { faB, faR, fas, faS} from '@fortawesome/free-solid-svg-icons';
     HomeComponent,
     AprposComponent,
     ContacteznousComponent,
-    SeconnecterComponent
+    SeconnecterComponent,
+  
+  
   ],
   imports: [
     BrowserModule,

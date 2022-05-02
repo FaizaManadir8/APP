@@ -10,6 +10,7 @@ const routes: Routes = [
 {path:"aprpos",component:AprposComponent},
 {path:"contacteznous",component:ContacteznousComponent},
 {path:"seconnecter",component:SeconnecterComponent},
+
 ];
 
 @NgModule({

@@ -1,0 +1,158 @@
+
+.contact
+{
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url(src\assets\pexels-mahima-1250260.jpg);
+	background-size: cover;
+}
+.contact .content
+{
+max-width: 800px;
+text-align: center;
+}
+.contact .content h2
+{
+	font-size: 40px;
+	font-weight: 500;
+	margin-top: 50px;
+	color: #fff ;
+}
+.container
+{
+	width: 100%;
+	display: flex;
+
+	margin-top: 30px;
+}
+.contactInfo
+{
+	width: 100%;
+	display: flex;
+	margin-top: -2%;
+    margin-left: -85%;
+}
+.container .contactInfo .box
+{
+position: relative;
+padding: 20px 0;
+display: flex;
+}
+.container .contactInfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text 
+{
+    width: auto;
+    display: flex;
+    margin-right: 30%;
+    font-size: 17px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+    
+}
+.container .contactInfo .box .text h3
+{
+    font-weight: 500;
+    color: #fff;
+	margin-top: auto;
+    margin-left: 10%;
+}
+.ContactForm
+{
+    width: 45%;
+	margin-right: 60%;
+    padding: 45px;
+	margin-top: 7%;
+    background: #fff;
+    border-radius: 4%;
+}
+.ContactForm h2
+{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.ContactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.ContactForm .inputBox input,
+.ContactForm .inputBox textarea
+{
+    width: 400px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+	resize: none;
+}
+.ContactForm .inputBox span
+{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+	pointer-events: none;
+	transition: 0.5s;
+	color: #666;
+}
+.ContactForm .inputBox input:focus ~ span,
+.ContactForm .inputBox input:valid ~ span,
+.ContactForm .inputBox textarea:focus ~ span,
+.ContactForm .inputBox textarea:valid ~ span
+{
+	color: #e91e63;
+	font-size: 12px;
+	transform: translateY(-20px);
+}
+.ContactForm .inputBox input[type="submit"]
+{
+	width: 100px;
+	background: #007300;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+}
+
+.mapouter
+{
+    position:relative;
+    text-align:right;
+    height:442px;
+    width:546px;
+    margin-left: 35%;
+    margin-top: -28%;
+}
+.gmap_canvas
+{
+    overflow:hidden;
+    background:none!important;
+    height:442px;
+    width:546px;
+    margin-left: 35%;
+    margin-top: -28%;
+    
+}
