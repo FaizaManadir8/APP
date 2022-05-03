@@ -4,7 +4,7 @@
 
 }
 nav{
-    background-color:#F0FDEE!important;
+    background-color:#009B72!important;
     margin-top:30px;
     margin-bottom: 0px !important;
     
@@ -29,15 +29,18 @@ li{
     text-decoration: none;
     list-style: none;
     display:inline-block ;
+    
 }
 nav ul{
 
     text-align: center;
+    
   
 }
 .btn{
     padding-left: 40px;
     padding-right:40px ;
+    color: white !important;
 }
 
 .search-icon{
