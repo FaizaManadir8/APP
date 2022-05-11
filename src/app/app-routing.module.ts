@@ -9,7 +9,7 @@ const routes: Routes = [
 {path:"",component:HomeComponent},
 {path:"aprpos",component:AprposComponent},
 {path:"contacteznous",component:ContacteznousComponent},
-{path:"seconnecter",component:SeconnecterComponent},
+{path:"login",component:SeconnecterComponent},
 
 ];
 

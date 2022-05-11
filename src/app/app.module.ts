@@ -16,12 +16,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
-import { FontAwesomeModule ,FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faB, faR, fas, faS} from '@fortawesome/free-solid-svg-icons';
-
-
-
-
+import {
+  FontAwesomeModule,
+  FaIconLibrary,
+} from '@fortawesome/angular-fontawesome';
+import { faB, faR, fas, faS } from '@fortawesome/free-solid-svg-icons';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,8 +32,6 @@ import { faB, faR, fas, faS} from '@fortawesome/free-solid-svg-icons';
     AprposComponent,
     ContacteznousComponent,
     SeconnecterComponent,
-  
-  
   ],
   imports: [
     BrowserModule,
@@ -46,13 +44,14 @@ import { faB, faR, fas, faS} from '@fortawesome/free-solid-svg-icons';
     MatIconModule,
     MatDividerModule,
     FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor( library :FaIconLibrary){
-    library.addIconPacks( fas,)
-
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas);
   }
- }
+}
