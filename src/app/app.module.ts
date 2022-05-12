@@ -25,6 +25,11 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProfilComponent } from './agent/profil/profil.component';
+import { CongemaladieComponent } from './agent/congemaladie/congemaladie.component';
+import { CongematerniteComponent } from './agent/congematernite/congematernite.component';
+import { ConsulteravisComponent } from './agent/consulteravis/consulteravis.component';
+import { ConsulterdemandeComponent } from './agent/consulterdemande/consulterdemande.component';
+import { DecisionComponent } from './agent/decision/decision.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +42,11 @@ import { ProfilComponent } from './agent/profil/profil.component';
     LoginComponent,
     SidebarComponent,
     ProfilComponent,
+    CongemaladieComponent,
+    CongematerniteComponent,
+    ConsulteravisComponent,
+    ConsulterdemandeComponent,
+    DecisionComponent,
   ],
   imports: [
     BrowserModule,
