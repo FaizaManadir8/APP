@@ -23,22 +23,23 @@ const routes: Routes = [
   { path: 'aprpos', component: AprposComponent },
   { path: 'contacteznous', component: ContacteznousComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'sidebar', component: SidebarComponent },
-  { path: 'profil', component: ProfilComponent },
-  { path: 'mesdemandes', component: MesdemandesComponent },
-  { path: 'decision', component: DecisionComponent },
-  { path: 'consulterdemande', component: ConsulterdemandeComponent },
-  { path: 'consulteravis', component: ConsulteravisComponent },
-  { path: 'congematernite', component: CongematerniteComponent },
+  { 
+    path: 'sidebar', component: SidebarComponent,
+  children:[
+    { path: 'profil', component: ProfilComponent },
+    { path: 'mesdemandes', component: MesdemandesComponent },
+    { path: 'decision', component: DecisionComponent },
+    { path: 'consulterdemande', component: ConsulterdemandeComponent },
+    { path: 'consulteravis', component: ConsulteravisComponent },
+ { path: 'congematernite', component: CongematerniteComponent },
   { path: 'congemaladie', component: CongemaladieComponent },
   { path: 'congeexceptionnel', component: CongeexceptionnelComponent },
   { path: 'congeadministratif', component: CongeadministratifComponent },
   { path: 'avisretour', component: AvisretourComponent },
   { path: 'avis', component: AvisComponent },
   { path: 'lesdecision', component: LesdecisionComponent },
+  ]  },
   
-
-
 ];
 
 @NgModule({
