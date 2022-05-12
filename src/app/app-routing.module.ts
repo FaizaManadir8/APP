@@ -26,7 +26,7 @@ const routes: Routes = [
   { 
     path: 'sidebar', component: SidebarComponent,
   children:[
-    { path: 'profil', component: ProfilComponent },
+    { path: '', component: ProfilComponent },
     { path: 'mesdemandes', component: MesdemandesComponent },
     { path: 'decision', component: DecisionComponent },
     { path: 'consulterdemande', component: ConsulterdemandeComponent },
