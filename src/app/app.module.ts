@@ -23,8 +23,10 @@ import { faB, faR, fas, faS } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './agent/sidebar/sidebar.component';
 import { ProfilComponent } from './agent/profil/profil.component';
+import { MesdemandesComponent } from './agent/mesdemandes/mesdemandes.component';
+import { LesdecisionComponent } from './agent/lesdecision/lesdecision.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { ProfilComponent } from './agent/profil/profil.component';
     LoginComponent,
     SidebarComponent,
     ProfilComponent,
+    MesdemandesComponent,
+    LesdecisionComponent,
   ],
   imports: [
     BrowserModule,

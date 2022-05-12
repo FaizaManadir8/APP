@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display&display=swap');
+
+body{
+  background-color: rgb(240, 234, 234);
+}
+.mat-toolbar{
+    background: rgb(240, 234, 234);
+    color: #214e41;
+    text-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 10px;
+    width: 97%;
+    margin-top: 2px;
+   
+  }
+ 
+  .hh{
+    margin-left: 1%;
+  }
+   
+   
+  mat-sidenav {
+    margin: 10px;
+    width: 300px;
+    border-right: none;
+    background: #009b72;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    height:1000px;
+ }
+
+ .content{
+    height: 900px;
+    margin: 16px;
+    margin-left: 20px;
+    display: flex;
+     justify-content: center;
+    font-size: 18px;
+    color: black;
+    background-color: rgb(255, 254, 254);
+
+    border-radius: 10px;
+       }
+
+       #file{
+         display: none;
+       }
+       #uploadBtn{
+      
+     
+        text-align: center;
+        color: wheat;
+        line-height: 10px;
+        font-family: sans-serif;
+        font-size: 10px;
+        cursor: pointer;
+        filter: blur(2);
+        
+        
+       }
+   i{
+        padding-right: 20px;
+        color: white;
+ }
+      
+       
+        .avatar {
+            margin-top: 16px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+          }
+          
+          .name {
+            margin-top: 8px;
+            font-weight: normal;
+          }
+          
+          .designation {
+            margin-top: 2px;
+            font-size: 0.7rem;
+            color: lightgrey;
+          }
+          
+          mat-divider {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+            
+
+ mat-sidenav-container{
+    height:1000px;
+             }
+ 
+ 
+
+
+
+
+
+ ul{
+  position: absolute;
+  list-style: none;
+  color: white;
+  border-radius: 5px;
+  
+}
+[id^=btn]:checked + ul{
+  display: block;
+}
+
+ul li{
+  line-height: 40px;
+ text-align: left;
+  cursor: pointer;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  cursor: pointer;
+}
+ ul li label{
+  font-size: 18px;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  cursor: pointer;
+}
+ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+ ul ul{
+  position: static;
+  display: none;
+}
+ ul ul li{
+  line-height: 30px;
+  padding-left:  20px;
+  border-bottom: none;
+  color: white;
+  height: inherit;
+  cursor: pointer;
+
+}
+ ul ul li a{
+  color: #e6e6e6;
+  font-size: 17px;
+}
+ ul li span{
+  font-size: 15px;
+  text-align: right;
+  right: 0;
+  color: white;
+  transition: 0.5s;
+}
+ ul li span.rotate{
+  transform: rotate(-180deg);
+}
+input{
+  display: none;
+}

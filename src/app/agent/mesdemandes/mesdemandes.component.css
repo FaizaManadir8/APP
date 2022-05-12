@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display&display=swap');
+table, th, td {
+    border: 1px solid lightgray;
+    padding: 15px;
+  }
+  table {
+    border-spacing: 10px;
+    color: whitesmoke;
+    height: 200px;
+  }
+  td{
+      color:black;
+  }
+thead {
+    background-color:#009B72 ;
+    height:s
+}
+i{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#Icon1{
+    color:lightgreen;
+}
+
+#Icon3{
+    color:red ;
+
+}
+h2{
+
+    font-family: 'Playfair Display', serif;
+}
