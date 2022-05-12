@@ -1,0 +1,57 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="form">
+      <div class="container">
+        <div class="row g-0">
+          <div class="col-lg-5">
+            <img
+              src="assets/markus-spiske-EK8QN9O0wRk-unsplash.jpg"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-7 px-5 pt-5">
+            <h1 class="font-weight-bold py-3">ORMVA-Ouarzazate</h1>
+            <h4>connectez-vous</h4>
+            <form (ngSubmit)="login()" [formGroup]="loginForm">
+              <div class="form-row">
+                <div class="col-lg-7">
+                  <input
+                    type="text"
+                    formControlName="login"
+                    placeholder="login"
+                    class="form-control my-5 p-3"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-lg-7">
+                  <input
+                    type="password"
+                    formControlName="password"
+                    placeholder="mot de passe"
+                    class="form-control my-5 p-3"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-lg-7">
+                  <p style="color: red">{{ error }}</p>
+                  <button type="submit" class="btn1">Se connecter</button>
+                </div>
+              </div>
+              <a href="#">mot de passe oublié ?</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  

@@ -4,8 +4,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { LoginService } from './login.service';
-
-
 export interface Compte {
   id?: number;
   login?: string;
@@ -14,11 +12,12 @@ export interface Compte {
 }
 
 @Component({
-  selector: 'app-seconnecter',
-  templateUrl: './seconnecter.component.html',
-  styleUrls: ['./seconnecter.component.css'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class SeconnecterComponent implements OnInit {
+export class LoginComponent implements OnInit {
+
   error: string | undefined;
   loginForm!: FormGroup;
   isLoading = false;
@@ -29,7 +28,9 @@ export class SeconnecterComponent implements OnInit {
     private formBuilder: FormBuilder,
     private httpClient: HttpClient,
     private loginService: LoginService
-  ) {}
+  ) {
+      this.createForm(); 
+  }
   faCoffee = faCoffee;
 
   ngOnInit(): void {}
@@ -44,7 +45,7 @@ export class SeconnecterComponent implements OnInit {
       (compte: Compte) => {
         this.user = compte;
         this.loginService.setUserLoggedIn(this.user);
-        this.router.navigate(['/home'], { replaceUrl: true });
+        this.router.navigate(['/'], { replaceUrl: true });
       },
       (error) => {
         this.isLoading = false;
@@ -68,4 +69,5 @@ export class SeconnecterComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
+
 }

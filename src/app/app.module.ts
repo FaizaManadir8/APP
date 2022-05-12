@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AprposComponent } from './aprpos/aprpos.component';
 import { ContacteznousComponent } from './contacteznous/contacteznous.component';
-import { SeconnecterComponent } from './seconnecter/seconnecter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -22,6 +21,8 @@ import {
 } from '@fortawesome/angular-fontawesome';
 import { faB, faR, fas, faS } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     AprposComponent,
     ContacteznousComponent,
-    SeconnecterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,8 +47,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,   
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {

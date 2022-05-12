@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Compte } from './seconnecter.component';
+import { Compte } from './login.component';
+
 
 @Injectable({
   providedIn: 'root',

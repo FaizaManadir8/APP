@@ -49,7 +49,7 @@ body{
   color: white;
 }
 .container-fluid {
-  background-image:url('src/assets/pexels-min-an-1353939.jpg') ;
+  background-color:rgb(186, 206, 176) ;
   background-position: center;
   background-size: cover;
   height: inherit;
@@ -57,4 +57,13 @@ body{
 }
 p{
   text-align:left;
+}
+h2{
+  color: whitesmoke;
+  padding-top:20px;
+}
+hr{
+  color: white ;
+  font-weight: 500;
+  
 }

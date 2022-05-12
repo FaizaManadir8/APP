@@ -1,4 +1,6 @@
-
+body{
+    margin-top:-40px;
+}
 .contact
 {
 	position: relative;
@@ -73,8 +75,7 @@ display: flex;
 	margin-top: auto;
     margin-left: 10%;
 }
-.ContactForm
-{
+.ContactForm{
     width: 45%;
 	margin-right: 60%;
     padding: 45px;
