@@ -25,11 +25,18 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProfilComponent } from './agent/profil/profil.component';
+<<<<<<< HEAD
 import { CongemaladieComponent } from './agent/congemaladie/congemaladie.component';
 import { CongematerniteComponent } from './agent/congematernite/congematernite.component';
 import { ConsulteravisComponent } from './agent/consulteravis/consulteravis.component';
 import { ConsulterdemandeComponent } from './agent/consulterdemande/consulterdemande.component';
 import { DecisionComponent } from './agent/decision/decision.component';
+=======
+import { AvisComponent } from './agent/avis/avis.component';
+import { AvisretourComponent } from './agent/avisretour/avisretour.component';
+import { CongeadministratifComponent } from './agent/congeadministratif/congeadministratif.component';
+import { CongeexceptionnelComponent } from './agent/congeexceptionnel/congeexceptionnel.component';
+>>>>>>> 7e2043ab80ee9a61062bff67786e0a26f7d00c60
 
 @NgModule({
   declarations: [
@@ -42,11 +49,18 @@ import { DecisionComponent } from './agent/decision/decision.component';
     LoginComponent,
     SidebarComponent,
     ProfilComponent,
+<<<<<<< HEAD
     CongemaladieComponent,
     CongematerniteComponent,
     ConsulteravisComponent,
     ConsulterdemandeComponent,
     DecisionComponent,
+=======
+    AvisComponent,
+    AvisretourComponent,
+    CongeadministratifComponent,
+    CongeexceptionnelComponent,
+>>>>>>> 7e2043ab80ee9a61062bff67786e0a26f7d00c60
   ],
   imports: [
     BrowserModule,

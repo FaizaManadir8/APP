@@ -1,0 +1,110 @@
+.board{
+    width: 900px;
+    
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    margin-top: 10%;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: block;
+    margin-bottom: 100px;
+}
+
+.avd{
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 80px;
+}
+
+.av{
+  font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    display: inline;
+    
+    margin-left: 70px;
+}
+table{
+    border-collapse: collapse ;
+    align-items: center;
+    
+    
+
+}
+.tdd{
+  place-items: center;
+  font-size: .95rem;
+  
+
+}
+tr{
+    border-bottom:20px solid white;
+    border-radius: 60px;
+    
+     place-items: center;
+     align-items: center;
+   
+}
+
+ 
+
+tbody tr td{
+    padding: 30px 30px;
+
+}
+tbody tr:hover{
+    background-color: #c9f1cc;
+    transition: 0.5s;
+}
+
+
+
+.btn{
+  background-color: #009b72;
+  height: 30px;
+  color: bisque;
+  padding: .3rem;
+  border-radius: 20px;
+  place-items: center;
+  padding-bottom: 15px;
+  padding-top: 2px;
+  width: 200px;
+  }
+
+.btn:hover{
+ background-color: #fafdf2;
+ color: black;
+ border: 1px solid;
+}
+
+btn1c{
+ margin-top: 200px;
+}
+.btn1{
+height: 40px;
+margin-top: 32.5%;
+margin-left: 75%;
+display: block;
+font-size: .95rem;
+background-color: #009b72;
+  height: 30px;
+  color: bisque;
+  padding: .3rem;
+  border-radius: 20px;
+  width: 150px;
+  padding-bottom: 15px;
+  padding-top: 5px;
+  border: none;
+  text-decoration: none;
+}
+
+.btn1:hover{
+background-color: #10b489 ;
+cursor: pointer;
+box-shadow: 0 0 5px #10b489,
+            0 0 20px #10b489,        
+            0 0 60px #10b489,
+            0 0 150px #10b489                ;
+}
+a{
+  text-decoration: none;
+}
+
