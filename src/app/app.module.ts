@@ -23,6 +23,8 @@ import { faB, faR, fas, faS } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ProfilComponent } from './agent/profil/profil.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     AprposComponent,
     ContacteznousComponent,
     LoginComponent,
+    SidebarComponent,
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,
