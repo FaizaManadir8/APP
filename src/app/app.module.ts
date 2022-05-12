@@ -25,6 +25,10 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProfilComponent } from './agent/profil/profil.component';
+import { AvisComponent } from './agent/avis/avis.component';
+import { AvisretourComponent } from './agent/avisretour/avisretour.component';
+import { CongeadministratifComponent } from './agent/congeadministratif/congeadministratif.component';
+import { CongeexceptionnelComponent } from './agent/congeexceptionnel/congeexceptionnel.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,10 @@ import { ProfilComponent } from './agent/profil/profil.component';
     LoginComponent,
     SidebarComponent,
     ProfilComponent,
+    AvisComponent,
+    AvisretourComponent,
+    CongeadministratifComponent,
+    CongeexceptionnelComponent,
   ],
   imports: [
     BrowserModule,
