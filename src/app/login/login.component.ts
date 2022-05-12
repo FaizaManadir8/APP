@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
       (compte: Compte) => {
         this.user = compte;
         this.loginService.setUserLoggedIn(this.user);
-        this.router.navigate(['/'], { replaceUrl: true });
+        this.router.navigate(['/sidebar'], { replaceUrl: true });
       },
       (error) => {
         this.isLoading = false;
