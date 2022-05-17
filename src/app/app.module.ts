@@ -22,7 +22,7 @@ import { faB, faR, fas, faS } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SidebarComponent } from './agent/sidebar/sidebar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProfilComponent } from './agent/profil/profil.component';
 import { MesdemandesComponent } from './agent/mesdemandes/mesdemandes.component';
 import { LesdecisionComponent } from './agent/lesdecision/lesdecision.component';
@@ -35,6 +35,21 @@ import { AvisComponent } from './agent/avis/avis.component';
 import { AvisretourComponent } from './agent/avisretour/avisretour.component';
 import { CongeadministratifComponent } from './agent/congeadministratif/congeadministratif.component';
 import { CongeexceptionnelComponent } from './agent/congeexceptionnel/congeexceptionnel.component';
+import { ProfilresComponent } from './responsable/profilres/profilres.component';
+import { LesagentsComponent } from './responsable/lesagents/lesagents.component';
+import { AjouteragentComponent } from './responsable/ajouteragent/ajouteragent.component';
+import { LesdemandesComponent } from './responsable/lesdemandes/lesdemandes.component';
+import { LesavisComponent } from './responsable/lesavis/lesavis.component';
+import { LesdecisionsComponent } from './responsable/lesdecisions/lesdecisions.component';
+import { ModifieragentComponent } from './responsable/modifieragent/modifieragent.component';
+import { ConsulterdemanComponent } from './responsable/consulterdeman/consulterdeman.component';
+import { AviComponent } from './responsable/avi/avi.component';
+import { AjouterdecisionComponent } from './responsable/ajouterdecision/ajouterdecision.component';
+import { ConsulterdecisionComponent } from './responsable/consulterdecision/consulterdecision.component';
+import { LesdemandeschefComponent } from './chef/lesdemandeschef/lesdemandeschef.component';
+import { ProfilchefComponent } from './chef/profilchef/profilchef.component';
+import { ConsulterdemandechefComponent } from './chef/consulterdemandechef/consulterdemandechef.component';
+
 
 
 @NgModule({
@@ -59,6 +74,21 @@ import { CongeexceptionnelComponent } from './agent/congeexceptionnel/congeexcep
     AvisretourComponent,
     CongeadministratifComponent,
     CongeexceptionnelComponent,
+    ProfilresComponent,
+    LesagentsComponent,
+    AjouteragentComponent,
+    LesdemandesComponent,
+    LesavisComponent,
+    LesdecisionsComponent,
+    ModifieragentComponent,
+    ConsulterdemanComponent,
+    AviComponent,
+    AjouterdecisionComponent,
+    ConsulterdecisionComponent,
+    LesdemandeschefComponent,
+    ProfilchefComponent,
+    ConsulterdemandechefComponent,
+
 
 
   ],

@@ -7,6 +7,7 @@ body{
     background-color: rgb(186, 206, 176);
     font-family: 'Roboto', sans-serif;
     margin-top:-40px;
+    height: inherit;
   }
   section{
     border-bottom-right-radius: 50px;

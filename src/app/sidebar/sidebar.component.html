@@ -17,11 +17,11 @@
         <img [src]="url" id="photo" class="avatar mat-elevation-z8" />
         <input type="file" id="file" (change)="onselectFile($event)" />
         <br />
-        <label  for="file" id="uploadBtn">Changer photo</label>
+        <label for="file" id="uploadBtn">Changer photo</label>
       </div>
 
-      <h4 class="name">{{compte.login}} </h4>
-      <p class="designation">{{compte.privilege}}</p>
+      <h4 class="name">{{ compte.login }}</h4>
+      <p class="designation">{{ compte.privilege }}</p>
 
       <mat-divider></mat-divider>
 
@@ -54,10 +54,50 @@
         </li>
         <li *ngIf="isAgent">
           <a routerLink="avisretour">
-            <i class="fa-solid fa-paste"></i>Avis de retour</a>
+            <i class="fa-solid fa-paste"></i>Avis de retour</a
+          >
         </li>
         <li *ngIf="isAgent">
-          <a routerLink="lesdecision" ><i class="fa-solid fa-folder-open"></i>Les decisions</a
+          <a routerLink="lesdecision"
+            ><i class="fa-solid fa-folder-open"></i>Les decisions</a
+          >
+        </li>
+        <!--responsabless-->
+        <li *ngIf="isResponsableRH">
+          <a href="/sidebar/"><i class="fa-solid fa-user"></i> Profile</a>
+        </li>
+        <li *ngIf="isResponsableRH">
+          <a href="lesagents"
+            ><i class="fa-solid fa-user-group"></i>Les agents</a
+          >
+        </li>
+        <li *ngIf="isResponsableRH">
+          <a href="ajouteragent"
+            ><i class="fa-solid fa-user-plus"></i>Ajouter agent</a
+          >
+        </li>
+        <li *ngIf="isResponsableRH">
+          <a href="lesdemandes"
+            ><i class="fa-solid fa-folder"></i>Les demandes</a
+          >
+        </li>
+        <li *ngIf="isResponsableRH">
+          <a href="lesavis"
+            ><i class="fa-solid fa-folder-open"></i>Les avis de retour</a
+          >
+        </li>
+        <li *ngIf="isResponsableRH">
+          <a href="lesdecisions"
+            ><i class="fa-solid fa-folder-plus"></i>Les decisions</a
+          >
+        </li>
+        <!--chef-->
+        <li *ngIf="isChefService">
+          <a href="/sidebar/"><i class="fa-solid fa-user"></i> Profile</a>
+        </li>
+        <li *ngIf="isChefService">
+          <a href="lesdemandeschef"
+            ><i class="fa-solid fa-folder"></i>Les demandes</a
           >
         </li>
         <mat-divider></mat-divider>
