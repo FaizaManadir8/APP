@@ -1,75 +1,78 @@
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  charset="utf-8"
+></script>
 <body>
-  
+  <mat-toolbar class="mat-elevation-z8">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+    </button>
+    <h1 class="hh">ORMVAO</h1>
+  </mat-toolbar>
 
-<mat-toolbar class="mat-elevation-z8">
-  <button
-  mat-icon-button
- 
-  (click)="sidenav.toggle()"
->
-  <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
-  <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
-</button>
-  <h1 class="hh">ORMVAO</h1> 
-</mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+      <div class="profile-pic-div">
+        <img [src]="url" id="photo" class="avatar mat-elevation-z8" />
+        <input type="file" id="file" (change)="onselectFile($event)" />
+        <br />
+        <label  for="file" id="uploadBtn">Changer photo</label>
+      </div>
 
-<mat-sidenav-container>
+      <h4 class="name">{{compte.login}} </h4>
+      <p class="designation">{{compte.privilege}}</p>
 
-  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
-   
-  
-    
-  
-  <div class="profile-pic-div">
-    <img [src]="url" id="photo"  class="avatar mat-elevation-z8">
-    <input type="file" id="file" (change)="onselectFile($event)" >
-    <br>
-    <label for="file" id="uploadBtn">Changer photo</label>
-  </div>
+      <mat-divider></mat-divider>
 
-  <h4 class="name">Nom Prenom</h4>
-  <p class="designation">fonction</p>
-  
-
-  
-    <mat-divider></mat-divider>
-    
       <ul class="menu">
-         <li><a routerLink="/sidebar/" routerLinkActive="active"><i class="fa-solid fa-user"></i>Profile</a></li>
-         <li>
-            <label for="btn-2" class="first"><i class="fa-solid fa-file-circle-plus"></i>Demander congé &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
+        <li *ngIf="isAgent">
+          <a routerLink="/sidebar/" routerLinkActive="active"
+            ><i class="fa-solid fa-user"></i>Profile</a
+          >
+        </li>
+        <li>
+          <label for="btn-2" *ngIf="isAgent" class="first">
+            <i class="fa-solid fa-file-circle-plus"></i>Demander congé
+            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
             <span class="fas fa-caret-down"></span>
-            </label>
-            <input type="checkbox" id="btn-2">
-            <ul>
-               <li><a routerLink="/sidebar/congeadministratif">- Congé Administratif</a></li>
-               <li><a href="/sidebar/congeaexceptionnel">- Congé Exceptionnel</a></li>
-               <li><a href="/sidebar/congemaladie">- Congé Maladie</a></li>
-               <li><a href="/sidebar/congematernite">- Congé Maternite</a></li>
-            </ul>
-         </li>
-         <li><a href="/sidebar/mesdemandes"><i class="fa-solid fa-folder"></i>Mes demandes</a></li>
-         <li><a href="/sidebar/avisretour"><i class="fa-solid fa-paste"></i>Avis de retour</a></li>
-         <li><a href="/sidebar/lesdecision"><i class="fa-solid fa-folder-open"></i>Les decisions</a></li>
-         <mat-divider></mat-divider>
-         <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Quitter</a></li>
-
-
-      
+          </label>
+          <input type="checkbox" id="btn-2" />
+          <ul>
+            <li>
+              <a routerLink="congeadministratif">- Congé Administratif</a>
+            </li>
+            <li><a routerLink="congeexceptionnel">- Congé Exceptionnel</a></li>
+            <li><a routerLink="congemaladie">- Congé Maladie</a></li>
+            <li><a routerLink="congematernite">- Congé Maternite</a></li>
+          </ul>
+        </li>
+        <li *ngIf="isAgent">
+          <a routerLink="mesdemandes"
+            ><i class="fa-solid fa-folder"></i>Mes demandes</a
+          >
+        </li>
+        <li *ngIf="isAgent">
+          <a routerLink="avisretour">
+            <i class="fa-solid fa-paste"></i>Avis de retour</a>
+        </li>
+        <li *ngIf="isAgent">
+          <a routerLink="lesdecision" ><i class="fa-solid fa-folder-open"></i>Les decisions</a
+          >
+        </li>
+        <mat-divider></mat-divider>
+        <li>
+          <a (click)="logout()"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i>Quitter</a
+          >
+        </li>
       </ul>
+    </mat-sidenav>
 
-
-   
-  </mat-sidenav>
-
-
-  <mat-sidenav-content>
-    <div class="content" class="content mat-elevation-z4">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-
+    <mat-sidenav-content>
+      <div class="content" class="content mat-elevation-z4">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </body>

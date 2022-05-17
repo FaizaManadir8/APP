@@ -1,31 +1,65 @@
 <section id="appointmant">
-    <div class="container">
-        <div class="formulaire">
-            <h3>Congé administratif</h3>
-            <form action="#" method="post">
-                <input  required="" type="text" placeholder="Date demande" class="zone" onfocus="(this.type='date')" >
-               <select pla class="type" >
-                    <option value="normal">Type de congé</option>
-                    <option value="normal">Normal</option>
-                    <option value="autorisation absence">Autorisation d'absence</option>
-                  </select>
-                  <input  required="" type="text" placeholder="Date départ" class="zone" onfocus="(this.type='date')" >
-                  <input  required="" type="text" placeholder="Date retour" class="zone" onfocus="(this.type='date')" >
-                <input type="number" name="nombrejours" required="" placeholder="Nombre de Jours" class="zone">
-                <input type="text" name="AdresseC" required="" placeholder="Adresse durant le congé" class="zone">
-              <select  class="type" >
-                    <option value="normal"> Interimaire</option>
-                    <option value="normal"></option>
-                    <option value="autorisation absence"></option>
-                  </select>
+  <div class="container">
+    <div class="formulaire">
+      <h3>Congé administratif</h3>
+      <form (ngSubmit)="newConge()" [formGroup]="congeForm">
+        <input
+          required=""
+          type="date"
+          placeholder="Date demande"
+          class="zone"
+          formControlName="dateDemande"
+        />
+        <select formControlName="type" class="type">
+          <option value="normal">Type de congé</option>
+          <option value="normal">Normal</option>
+          <option value="autorisation absence">Autorisation d'absence</option>
+        </select>
+        <input
+          required=""
+          type="date"
+          placeholder="Date départ"
+          class="zone"
+          formControlName="dateDebut"
+        />
+        <input
+          required=""
+          type="date"
+          placeholder="Date retour"
+          class="zone"
+          formControlName="dateFin"
+        />
+        <input
+          type="number"
+          name="nombrejours"
+          required=""
+          placeholder="Nombre de Jours"
+          class="zone"
+          formControlName="nombreDeJours"
+        />
+        <input
+          type="text"
+          name="AdresseC"
+          required=""
+          placeholder="Adresse durant le congé"
+          class="zone"
+          formControlName="adresseConge"
+        />
+        <select formControlName="interimaire" class="type">
+          <option value="normal">Interimaire</option>
+          <option value="normal"></option>
+          <option value="autorisation absence"></option>
+        </select>
 
-                <button>Envoyer</button>
-            </form>
-
-        </div>
+        <input
+          type="submit"
+          name="enregistrer"
+          class="btn btn-dark lg text-center"
+        />
+        <br />
+        <p *ngIf="isPassed" style="color: green">{{ success }}</p>
+        <p *ngIf="!isPassed" style="color: red">{{ error }}</p>
+      </form>
     </div>
+  </div>
 </section>
-
-
-  
-

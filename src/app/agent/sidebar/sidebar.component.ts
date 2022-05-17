@@ -2,6 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { delay, filter } from 'rxjs/operators';
+import { Compte } from 'src/app/login/login.component';
+import { LoginService } from 'src/app/login/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,6 +12,11 @@ import { delay, filter } from 'rxjs/operators';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+  compte !: Compte;
+  isAgent:boolean=false;
+  isChefService:boolean=false;
+  isResponsableRH:boolean=false;
+  
   url="assets/avatar6.png"
   onselectFile(e:any){
     if(e.target.files){
@@ -26,8 +34,26 @@ export class SidebarComponent implements OnInit {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav; 
   
-    constructor(private observer: BreakpointObserver) {}
-  
+    constructor(private observer: BreakpointObserver,private loginService : LoginService,private router: Router) {
+      this.getUserLoggedIn();
+    }
+    getUserLoggedIn() {
+      if (localStorage.getItem('user')) {
+      this.compte = JSON.parse(localStorage.getItem('user')!);
+       
+      if(this.compte){
+        console.log("compte", this.compte);  
+        if(this.compte.privilege === "Agent"){
+          this.isAgent = true;
+        }else if(this.compte.privilege === "ChefDeService"){
+          this.isChefService = true;
+        }else(this.compte.privilege === "ResponsableRH")
+          this.isResponsableRH = true;
+        }
+      }
+      
+    }
+    
     ngAfterViewInit() {
       this.observer
         .observe(['(max-width: 800px)'])
@@ -46,5 +72,8 @@ export class SidebarComponent implements OnInit {
       }
   ngOnInit(): void {
   }
-
+  logout() {
+    this.loginService.clearLocalStorage(); 
+    this.router.navigate(['/login']);
+   }
 }

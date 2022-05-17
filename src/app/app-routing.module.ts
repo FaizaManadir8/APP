@@ -16,6 +16,7 @@ import { SidebarComponent } from './agent/sidebar/sidebar.component';
 import { AprposComponent } from './aprpos/aprpos.component';
 import { ContacteznousComponent } from './contacteznous/contacteznous.component';
 import { HomeComponent } from './home/home.component';
+import { AuthGuardService } from './login/auth-guard.service';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
@@ -26,18 +27,18 @@ const routes: Routes = [
   { 
     path: 'sidebar', component: SidebarComponent,
   children:[
-    { path: '', component: ProfilComponent },
-    { path: 'mesdemandes', component: MesdemandesComponent },
-    { path: 'decision', component: DecisionComponent },
-    { path: 'consulterdemande', component: ConsulterdemandeComponent },
-    { path: 'consulteravis', component: ConsulteravisComponent },
- { path: 'congematernite', component: CongematerniteComponent },
-  { path: 'congemaladie', component: CongemaladieComponent },
-  { path: 'congeexceptionnel', component: CongeexceptionnelComponent },
-  { path: 'congeadministratif', component: CongeadministratifComponent },
-  { path: 'avisretour', component: AvisretourComponent },
-  { path: 'avis', component: AvisComponent },
-  { path: 'lesdecision', component: LesdecisionComponent },
+    { path: '', component: ProfilComponent, canActivate : [AuthGuardService] },
+    { path: 'mesdemandes', component: MesdemandesComponent, canActivate : [AuthGuardService] },
+    { path: 'decision', component: DecisionComponent, canActivate : [AuthGuardService] },
+    { path: 'consulterdemande', component: ConsulterdemandeComponent , canActivate : [AuthGuardService]},
+    { path: 'consulteravis', component: ConsulteravisComponent , canActivate : [AuthGuardService]},
+ { path: 'congematernite', component: CongematerniteComponent, canActivate : [AuthGuardService] },
+  { path: 'congemaladie', component: CongemaladieComponent,canActivate : [AuthGuardService] },
+  { path: 'congeexceptionnel', component: CongeexceptionnelComponent,canActivate : [AuthGuardService] },
+  { path: 'congeadministratif', component: CongeadministratifComponent,canActivate : [AuthGuardService] },
+  { path: 'avisretour', component: AvisretourComponent,canActivate : [AuthGuardService] },
+  { path: 'avis', component: AvisComponent,canActivate : [AuthGuardService] },
+  { path: 'lesdecision', component: LesdecisionComponent, canActivate : [AuthGuardService] },
   ]  },
   
 ];
