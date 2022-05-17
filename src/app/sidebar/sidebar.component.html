@@ -26,14 +26,10 @@
       <mat-divider></mat-divider>
 
       <ul class="menu">
-        <li *ngIf="isAgent">
-          <a routerLink="/sidebar/" routerLinkActive="active"
-            ><i class="fa-solid fa-user"></i>Profile</a
-          >
-        </li>
-        <li>
-          <label for="btn-2" *ngIf="isAgent" class="first">
-            <i class="fa-solid fa-file-circle-plus"></i>Demander congé
+        <li *ngIf="isChefService"> <a routerLink="/sidebar"><i class="fa-solid fa-user"></i> Profile</a></li>
+        <li *ngIf="isChefService"><a routerLink="/lesdemandeschef"><i class="fa-solid fa-folder"></i>Les demandes</a></li>
+        <li *ngIf="isAgent"><a routerLink="/sidebar" routerLinkActive="active" ><i class="fa-solid fa-user"></i>Profile</a></li>
+        <li><label for="btn-2" *ngIf="isAgent" class="first"><i class="fa-solid fa-file-circle-plus"></i>Demander congé
             &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
             <span class="fas fa-caret-down"></span>
           </label>
@@ -48,63 +44,42 @@
           </ul>
         </li>
         <li *ngIf="isAgent">
-          <a routerLink="mesdemandes"
-            ><i class="fa-solid fa-folder"></i>Mes demandes</a
-          >
+          <a routerLink="/mesdemandes"><i class="fa-solid fa-folder"></i>Mes demandes</a> </li>
+        <li *ngIf="isAgent"><a routerLink="/avisretour"><i class="fa-solid fa-paste"></i>Avis de retour</a>
         </li>
-        <li *ngIf="isAgent">
-          <a routerLink="avisretour">
-            <i class="fa-solid fa-paste"></i>Avis de retour</a
-          >
-        </li>
-        <li *ngIf="isAgent">
-          <a routerLink="lesdecision"
-            ><i class="fa-solid fa-folder-open"></i>Les decisions</a
-          >
-        </li>
+        <li *ngIf="isAgent"><a routerLink="/lesdecision"><i class="fa-solid fa-folder-open"></i>Les decisions</a></li>
         <!--responsabless-->
         <li *ngIf="isResponsableRH">
-          <a href="/sidebar/"><i class="fa-solid fa-user"></i> Profile</a>
+          <a routerLink="/sidebar"><i class="fa-solid fa-user"></i> Profile</a>
         </li>
         <li *ngIf="isResponsableRH">
-          <a href="lesagents"
+          <a routerLink="/lesagents"
             ><i class="fa-solid fa-user-group"></i>Les agents</a
           >
         </li>
         <li *ngIf="isResponsableRH">
-          <a href="ajouteragent"
+          <a routerLink="ajouteragent"
             ><i class="fa-solid fa-user-plus"></i>Ajouter agent</a
           >
         </li>
         <li *ngIf="isResponsableRH">
-          <a href="lesdemandes"
+          <a routerLink="/lesdemandes"
             ><i class="fa-solid fa-folder"></i>Les demandes</a
           >
         </li>
         <li *ngIf="isResponsableRH">
-          <a href="lesavis"
+          <a routerLink="/lesavis"
             ><i class="fa-solid fa-folder-open"></i>Les avis de retour</a
           >
         </li>
         <li *ngIf="isResponsableRH">
-          <a href="lesdecisions"
+          <a routerLink="/lesdecisions"
             ><i class="fa-solid fa-folder-plus"></i>Les decisions</a
-          >
-        </li>
-        <!--chef-->
-        <li *ngIf="isChefService">
-          <a href="/sidebar/"><i class="fa-solid fa-user"></i> Profile</a>
-        </li>
-        <li *ngIf="isChefService">
-          <a href="lesdemandeschef"
-            ><i class="fa-solid fa-folder"></i>Les demandes</a
           >
         </li>
         <mat-divider></mat-divider>
         <li>
-          <a (click)="logout()"
-            ><i class="fa-solid fa-arrow-right-from-bracket"></i>Quitter</a
-          >
+          <a (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>Quitter</a>
         </li>
       </ul>
     </mat-sidenav>
