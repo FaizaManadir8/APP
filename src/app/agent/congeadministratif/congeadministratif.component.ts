@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Compte } from 'src/app/login/login.component';
 
 export interface Conge {
   dateDemande: Date;
@@ -11,7 +12,7 @@ export interface Conge {
   interimaire: string;
   adresseConge: string;
   etat: string;
-  agent:string;
+  id: number;
 }
 @Component({
   selector: 'app-congeadministratif',
@@ -19,11 +20,14 @@ export interface Conge {
   styleUrls: ['./congeadministratif.component.css'],
 })
 export class CongeadministratifComponent implements OnInit {
+
   congeForm!: FormGroup;
   error: string | undefined;
   success!: string;
   isPassed: boolean = false;
   id!: number;
+  compte!: Compte;
+
   constructor(
     private formBuilder: FormBuilder,
     private httpClient: HttpClient
@@ -37,8 +41,11 @@ export class CongeadministratifComponent implements OnInit {
 
   newConge() {
     console.log('conge form', this.congeForm.value);
-    const conge = this.httpClient.post( 'http://localhost:8080/conges/save', this.congeForm.value);
-        conge.subscribe(
+    const conge = this.httpClient.post(
+      'http://localhost:8080/conges/save',
+      this.congeForm.value
+    );
+    conge.subscribe(
       (conge: any) => {
         console.log('congé', conge);
         this.isPassed = true;
@@ -51,9 +58,18 @@ export class CongeadministratifComponent implements OnInit {
       }
     );
   }
+  // getUserLoggedIn() {
+  //   if (localStorage.getItem('user')) {
+  //     this.compte = JSON.parse(localStorage.getItem('user')!);
+  //   }
+  // }
   private createForm() {
+    if (localStorage.getItem('user')) {
+      this.compte = JSON.parse(localStorage.getItem('user')!);
+      console.log(this.compte.id);
+    }
     this.congeForm = this.formBuilder.group({
-      id: '',
+      // id: '',
       dateDemande: ['', Validators.required],
       dateDebut: ['', Validators.required],
       dateFin: ['', Validators.required],
@@ -62,7 +78,7 @@ export class CongeadministratifComponent implements OnInit {
       adresseConge: ['', Validators.required],
       // interimaire: ['', Validators.required],
       etat: 'en attente',
-      agentConserné:""
+      id: this.compte.id, 
     });
   }
 }

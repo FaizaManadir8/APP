@@ -10,6 +10,12 @@ export interface Compte {
   login?: string;
   privilege?: string;
   password?: string;
+  nom?:string;
+  prenom?:string;
+  telephone?:string;
+  cin?:string;
+  mail?:string;
+
 }
 
 @Component({

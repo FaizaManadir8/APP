@@ -41,7 +41,6 @@ export class SidebarComponent implements OnInit {
   getUserLoggedIn() {
     if (localStorage.getItem('user')) {
       this.compte = JSON.parse(localStorage.getItem('user')!);
-
       if (this.compte) {
         console.log('compte', this.compte);
         if (this.compte.privilege === 'Agent') {
@@ -52,11 +51,12 @@ export class SidebarComponent implements OnInit {
           this.isAgent = false;
           this.isChefService = true;
           this.isResponsableRH = false;
-        } else if (this.compte.privilege === 'ResponsableRH')
-        {this.isAgent = false;
-        this.isChefService = false;
-        this.isResponsableRH = true;
-        }}
+        } else if (this.compte.privilege === 'ResponsableRH') {
+          this.isAgent = false;
+          this.isChefService = false;
+          this.isResponsableRH = true;
+        }
+      }
     }
   }
 

@@ -49,6 +49,12 @@ import { ConsulterdecisionComponent } from './responsable/consulterdecision/cons
 import { LesdemandeschefComponent } from './chef/lesdemandeschef/lesdemandeschef.component';
 import { ProfilchefComponent } from './chef/profilchef/profilchef.component';
 import { ConsulterdemandechefComponent } from './chef/consulterdemandechef/consulterdemandechef.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DeleteCongeComponent } from './delete-conge/delete-conge.component';
+import { UpdateCongeComponent } from './update-conge/update-conge.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -88,6 +94,8 @@ import { ConsulterdemandechefComponent } from './chef/consulterdemandechef/consu
     LesdemandeschefComponent,
     ProfilchefComponent,
     ConsulterdemandechefComponent,
+    DeleteCongeComponent,
+    UpdateCongeComponent,
 
 
 
@@ -106,6 +114,11 @@ import { ConsulterdemandechefComponent } from './chef/consulterdemandechef/consu
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,   
+    MatTableModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatPaginatorModule 
+    // MatInputModule
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent],
