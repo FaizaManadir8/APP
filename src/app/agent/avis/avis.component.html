@@ -1,12 +1,12 @@
 
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<div class="container-fluid">
+
+<div class="container-fluid" >
         <div class="container">
             <div class="formBox">
-                <form>
+                <form (ngSubmit)="newAvis()" [formGroup]="avisForm">
                         <div class="row">
                             <div class="col-sm-12">
                                 <h1>Avis de Retour</h1>
@@ -17,14 +17,14 @@
                             <div class="col-sm-6">
                                 <div class="inputBox ">
                                     <label for="Ddp">Nom</label>
-                                    <input type="text" name="" class="input">
+                                    <input type="text" name="" class="input" formControlName="nom">
                                 </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <div class="inputBox">
                                     <label for="Ddp">Prénom</label>
-                                    <input type="text" name="" class="input">
+                                    <input type="text" name="" class="input" formControlName="prenom">
                                 </div>
                             </div>
                         </div>
@@ -33,14 +33,14 @@
                             <div class="col-sm-6">
                                 <div class="inputBox">
                                     <label for="Ddp">Matricule</label>
-                                    <input type="text" name="" class="input">
+                                    <input type="text" name="" class="input" formControlName="matricule">
                                 </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <div class="inputBox">
                                     <label for="Ddp">Grade</label>
-                                    <input type="text" name="" class="input">
+                                    <input type="text" name="" class="input" formControlName="grade">
                                 </div>
                             </div>
                         </div>
@@ -49,14 +49,14 @@
                             <div class="col-sm-6">
                                 <div class="inputBox">
                                     <label for="Ddp">Fonction</label>
-                                    <input type="text" name="" class="input">
+                                    <input type="text" name="" class="input" formControlName="foction">
                                 </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="inputBox">
                                         <label for="Ddp">Jours départ</label>
-                                        <input required="" type="date" name="date" class="zone" id="dateD">
+                                        <input required="" type="date" name="date" class="zone" id="dateD"formControlName="dateDemande">
                                         
                                     </div>
                             </div>
@@ -66,14 +66,14 @@
                             <div class="col-sm-6">
                                 <div class="inputBox">
                                     <label for="Ddp">Jours retour</label>
-                                        <input required="" type="date" name="date" class="zone" id="dateD">
+                                        <input required="" type="date" name="date" class="zone" id="dateD"formControlName="dateDebut">
                                 </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="inputBox">
                                         <label for="Ddp">Date reprise</label>
-                                        <input required="" type="date" name="date" class="zone" id="dateD">
+                                        <input required="" type="date" name="date" class="zone" id="dateD"formControlName="dateReprise">
                                         
                                     </div>
                             </div>
@@ -84,7 +84,9 @@
                                 <input type="submit" name="" class="button" value="Envoyer">
                             </div>
                         </div>
-                    
+                        <br />
+                        <p *ngIf="isPassed" style="color: green">{{ success }}</p>
+                        <p *ngIf="!isPassed" style="color: red">{{ error }}</p>
                 </form>
             </div>
         </div>

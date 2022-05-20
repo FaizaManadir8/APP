@@ -55,6 +55,7 @@ import { DeleteCongeComponent } from './delete-conge/delete-conge.component';
 import { UpdateCongeComponent } from './update-conge/update-conge.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { UpdateavisComponent } from './updateavis/updateavis.component';
 
 
 
@@ -96,6 +97,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ConsulterdemandechefComponent,
     DeleteCongeComponent,
     UpdateCongeComponent,
+    UpdateavisComponent,
 
 
 

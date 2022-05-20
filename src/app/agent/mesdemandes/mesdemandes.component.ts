@@ -54,7 +54,7 @@ export class MesdemandesComponent implements OnInit {
 editConge(conge:any) {
 
  const dialogRef = this.dialog.open(UpdateCongeComponent, {
-   width: '450px',
+   width: '50%',
    data: conge
  });
  dialogRef.afterClosed().subscribe(result => {

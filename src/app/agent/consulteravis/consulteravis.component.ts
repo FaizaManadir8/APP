@@ -10,6 +10,7 @@ export class ConsulteravisComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

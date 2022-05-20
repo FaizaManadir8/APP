@@ -13,7 +13,7 @@ interface ListeConges {
   dateDebut: Date;
   dateFin: Date;
   etat: string;
-}
+} 
 @Component({
   selector: 'app-lesdemandeschef',
   templateUrl: './lesdemandeschef.component.html',

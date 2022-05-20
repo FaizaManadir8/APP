@@ -8,6 +8,7 @@ body{
     margin-top: 10px;
     padding: 50px;
     justify-content: space-between;
+  
 }
 .formBox  h1{
     margin: 0;
@@ -53,7 +54,7 @@ label{
    align-items: center;
    flex-direction: row-reverse;
    background-color: white;
-   height: 620px ;
+   height: 820px ;
    padding: 20px;
    border-radius: 15px;
    box-shadow: 0px 10px 50px -10px #a8a6a6;   
