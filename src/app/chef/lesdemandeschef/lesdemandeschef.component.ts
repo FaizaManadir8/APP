@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Conge } from 'src/app/agent/congeadministratif/congeadministratif.component';
+import { ConsulterdemandechefComponent } from '../consulterdemandechef/consulterdemandechef.component';
 // import { ListeConges } from 'src/app/agent/mesdemandes/mesdemandes.component';
 interface ListeConges {
   id: number;
@@ -83,6 +84,7 @@ export class LesdemandeschefComponent implements OnInit {
           this.error = error1.error.message;
         }
       );
+      
   }
 
   refuse(conge: Conge) {
@@ -102,6 +104,12 @@ export class LesdemandeschefComponent implements OnInit {
           console.log('error', error1);
           this.error = error1.error.message;
         }
-      );
+      );  
+  }
+  voir(conge: Conge) {
+    const dialogRef = this.dialog.open(ConsulterdemandechefComponent, {
+      width: '100%',
+      data: conge,
+    });
   }
 }

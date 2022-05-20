@@ -5,6 +5,7 @@ import { delay, filter } from 'rxjs/operators';
 import { Compte } from 'src/app/login/login.component';
 import { LoginService } from 'src/app/login/login.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-sidebar',
@@ -34,7 +35,9 @@ export class SidebarComponent implements OnInit {
   constructor(
     private observer: BreakpointObserver,
     private loginService: LoginService,
-    private router: Router
+    private router: Router,
+    private httpClient : HttpClient,
+  
   ) {
     this.getUserLoggedIn();
   }
@@ -59,6 +62,12 @@ export class SidebarComponent implements OnInit {
       }
     }
   }
+  getUser(){
+    this.httpClient.get(`http://localhost:8080/comptes/get/${this.compte.id}`).subscribe((response)=>{
+    this.compte=response;
+    console.log("response",response)
+    });
+  }
 
   ngAfterViewInit() {
     this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
@@ -71,7 +80,7 @@ export class SidebarComponent implements OnInit {
       }
     });
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {  this.getUser()}
   logout() {
     this.loginService.clearLocalStorage();
     this.router.navigate(['/login']);
