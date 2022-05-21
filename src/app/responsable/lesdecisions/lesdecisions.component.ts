@@ -3,10 +3,11 @@ import { MatTableDataSource } from '@angular/material/table';
 import {MatDialog} from "@angular/material/dialog";
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { DeleteCongeComponent } from 'src/app/delete-conge/delete-conge.component';
-import { UpdateCongeComponent } from 'src/app/update-conge/update-conge.component';
 import { HttpClient } from '@angular/common/http';
-
+import { UpdatedecisionComponent } from 'src/app/updatedecision/updatedecision.component';
+import { ConsulterdecisionComponent } from '../consulterdecision/consulterdecision.component';
+import { Decision } from '../ajouterdecision/ajouterdecision.component';
+import { DeletdecisionComponent } from 'src/app/deletdecision/deletdecision.component';
 export interface ListeDecision {
   id: number;
   nombreDeJours: number;
@@ -14,6 +15,8 @@ export interface ListeDecision {
   dateDepart: Date;
   dateRetour: Date;
   etat:string;
+  nom: string;
+  prenom: string;
 }
 
 @Component({
@@ -54,7 +57,7 @@ export class LesdecisionsComponent implements OnInit {
 
   editDecision(decision:any) {
 
-    const dialogRef = this.dialog.open(UpdateCongeComponent, {
+    const dialogRef = this.dialog.open(UpdatedecisionComponent, {
       width: '450px',
       data: decision
     });
@@ -65,7 +68,7 @@ export class LesdecisionsComponent implements OnInit {
    
    }
    deleteDecision(decision:any){
-    const dialogRef = this.dialog.open(DeleteCongeComponent, {
+    const dialogRef = this.dialog.open(DeletdecisionComponent, {
       width: '450px',
       data: decision
     });
@@ -78,4 +81,11 @@ export class LesdecisionsComponent implements OnInit {
       this.decision = decision;
     });
    }
+   voir(decision: Decision) {
+    const dialogRef = this.dialog.open(ConsulterdecisionComponent, {
+      width: '100%',
+      height:'inherit',
+      data: decision,
+    });
+  }
 }

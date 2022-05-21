@@ -86,13 +86,16 @@ text-align:center ;
 
   .supp{
     background-color:#ff3761;
+    margin-left: 8%;
   }
   .Edit{
     background-color: #B5DFB2;
+    margin-left: 18%;
   }
 
-  .btnvoir{
-    background-color: lightblue;
+  .voir{
+    background-color: rgb(5, 170, 162);
+    margin-left: 8%;
   }
   #fonc{
     text-align: center;
@@ -102,5 +105,5 @@ text-align:center ;
   }
 a{
   text-decoration: none;
-  color: white;
+  color: rgb(59, 58, 58);
 }

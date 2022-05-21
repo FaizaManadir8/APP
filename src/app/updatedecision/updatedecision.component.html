@@ -1,0 +1,33 @@
+<div mat-dialog-content>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.id" placeholder="id">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.nom" placeholder="nom">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="data.prenom" placeholder="prénom">
+      </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.nombreDeJours" placeholder="nombreDeJours">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.dateDepart" placeholder="dateDepart">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.dateRetour" placeholder="dateRetour">
+      </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.dateDemande" placeholder="dateDemande">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="data.etat" placeholder="etat">
+      </mat-form-field>
+   
+  </div> 
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()" class="annuler">Annuler</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="modifier">Modifier</button>
+  </div>

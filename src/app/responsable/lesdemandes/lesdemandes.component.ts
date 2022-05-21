@@ -4,6 +4,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { ConsulterdecisionComponent } from '../consulterdecision/consulterdecision.component';
+import { Decision } from '../ajouterdecision/ajouterdecision.component';
 export interface ListeConges {
   id: number;
   nombreDeJours: number;
@@ -43,5 +45,12 @@ export class LesdemandesComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+  voir(decision: Decision) {
+    const dialogRef = this.dialog.open(ConsulterdecisionComponent, {
+      width: '100%',
+      height:'inherit',
+      data: decision,
+    });
   }
 }
