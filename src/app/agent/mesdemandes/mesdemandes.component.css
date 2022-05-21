@@ -11,23 +11,37 @@ table, th, td {
   td{
       color:black;
   }
-thead {
-    background-color:#009B72 ;
-    height:s
-}
+
 i{
     padding-left: 8px;
     padding-right: 8px;
 }
-#Icon1{
-    color:lightgreen;
-}
 
-#Icon3{
-    color:red ;
-
-}
 h2{
 
     font-family: 'Playfair Display', serif;
+}
+th{
+    background-color: #009B72;
+    color: aliceblue;
+}
+.mod{
+    text-align: center;
+}
+#nn{
+    text-align: center;
+}
+
+.btn1{
+    background-color: #B5DFB2;
+}
+.btn2{
+    background-color: #ff3761;
+}
+.btn3{
+    background-color: lightblue;
+}
+a{
+    text-decoration: none;
+    color: white ;
 }

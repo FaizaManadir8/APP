@@ -1,25 +1,26 @@
 <div class="container-fluid">
     <div class="container">
         <div class="formBox">
-            <form>
+            <form >
                     <div class="row">
                         <div class="col-sm-12">
-                            <h1>Avis de Retour</h1>
+                            <h1>Avis de  Retour</h1>
                         </div>
                     </div>
-
+                    
                     <div class="row">
-                        <div class="col-sm-6">
+                      <div class="col-sm-6">
                             <div class="inputBox ">
                                 <label for="Ddp">Nom</label>
-                                <input type="text" name="" class="input">
+                                <input type="text" name="nom" class="input" readonly="readonly"  [(ngModel)]="data.nom">
                             </div>
                         </div>
+
 
                         <div class="col-sm-6">
                             <div class="inputBox">
                                 <label for="Ddp">Prénom</label>
-                                <input type="text" name="" class="input">
+                                <input type="text" name="prenom" class="input" readonly="readonly"  [(ngModel)]="data.prenom"/>
                             </div>
                         </div>
                     </div>
@@ -28,14 +29,15 @@
                         <div class="col-sm-6">
                             <div class="inputBox">
                                 <label for="Ddp">Matricule</label>
-                                <input type="text" name="" class="input">
+                                <input type="text" name="matricule" class="input" readonly="readonly"  [(ngModel)]="data.matricule">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="inputBox">
                                 <label for="Ddp">Grade</label>
-                                <input type="text" name="" class="input">
+                                <input type="text" name="grade" class="input" readonly="readonly"  [(ngModel)]="data.grade">
+
                             </div>
                         </div>
                     </div>
@@ -44,14 +46,14 @@
                         <div class="col-sm-6">
                             <div class="inputBox">
                                 <label for="Ddp">Fonction</label>
-                                <input type="text" name="" class="input">
+                                <input type="text" name="fonction" class="input" readonly="readonly"  [(ngModel)]="data.fonction">
                             </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <div class="inputBox">
                                     <label for="Ddp">Jours départ</label>
-                                    <input required="" type="date" name="date" class="zone" id="dateD">
+                                    <input required="" type="date" name="dateDemande" class="zone" id="dateD" readonly="readonly"  [(ngModel)]="data.dateDemande">
                                     
                                 </div>
                         </div>
@@ -61,14 +63,14 @@
                         <div class="col-sm-6">
                             <div class="inputBox">
                                 <label for="Ddp">Jours retour</label>
-                                    <input required="" type="date" name="date" class="zone" id="dateD">
+                                    <input required="" type="date" name="dateDebut" class="zone" id="dateD" readonly="readonly"  [(ngModel)]="data.dateDebut">
                             </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <div class="inputBox">
                                     <label for="Ddp">Date reprise</label>
-                                    <input required="" type="date" name="date" class="zone" id="dateD">
+                                    <input required="" type="date" name="dateReprise" class="zone" id="dateD" readonly="readonly"  [(ngModel)]="data.dateReprise">
                                     
                                 </div>
                         </div>

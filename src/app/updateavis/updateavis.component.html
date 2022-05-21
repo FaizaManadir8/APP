@@ -1,4 +1,3 @@
-
 <div mat-dialog-content>
     <mat-form-field>
       <label for="id">Id :&nbsp;</label>
@@ -6,20 +5,16 @@
     </mat-form-field>
     &nbsp;&nbsp;
     <mat-form-field>
-      <label for="nombrejour">nombrejour:&nbsp;</label>
-      <input matInput [(ngModel)]="data.nombreDeJours" placeholder="nombreDeJours" id="nombrejour">
-    </mat-form-field>
-    <mat-form-field>
       <label for="datedebut">Date debut :&nbsp;</label>
       <input matInput [(ngModel)]="data.dateDebut" placeholder="dateDebut" id="datedebut">
     </mat-form-field>
     <mat-form-field>
-      <label for="dateFin"> Date retour :&nbsp;</label>
-        <input matInput [(ngModel)]="data.dateFin" placeholder="dateFin" id="dateFin">
+      <label for="dateReprise"> Date Reprise :&nbsp;</label>
+        <input matInput [(ngModel)]="data.dateReprise" placeholder="dateReprise" id="dateReprise" >
       </mat-form-field>
     <mat-form-field>
-      <label for="datedemande">Date demande :&nbsp;</label>
-        <input matInput [(ngModel)]="data.dateDemande" placeholder="dateDemande" id="datedemande">
+      <label for="datedemande">Date Retour :&nbsp;</label>
+        <input matInput [(ngModel)]="data.dateDemande" placeholder="dateRetour" id="datedemande">
       </mat-form-field>
    
   </div> 

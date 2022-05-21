@@ -55,8 +55,13 @@ import { DeleteCongeComponent } from './delete-conge/delete-conge.component';
 import { UpdateCongeComponent } from './update-conge/update-conge.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
+<<<<<<< HEAD
 import { UpdatedecisionComponent } from './updatedecision/updatedecision.component';
 import { DeletdecisionComponent } from './deletdecision/deletdecision.component';
+=======
+import { UpdateavisComponent } from './updateavis/updateavis.component';
+import { DeleteavisComponent } from './deleteavis/deleteavis.component';
+>>>>>>> 187ec4147cb40ce6104f686d63fb6d1a38cd870e
 
 
 
@@ -98,8 +103,13 @@ import { DeletdecisionComponent } from './deletdecision/deletdecision.component'
     ConsulterdemandechefComponent,
     DeleteCongeComponent,
     UpdateCongeComponent,
+<<<<<<< HEAD
     UpdatedecisionComponent,
     DeletdecisionComponent,
+=======
+    UpdateavisComponent,
+    DeleteavisComponent,
+>>>>>>> 187ec4147cb40ce6104f686d63fb6d1a38cd870e
 
 
 
