@@ -15,6 +15,12 @@ export interface Compte {
   telephone?:string;
   cin?:string;
   mail?:string;
+  grade?:string;
+  fonction?:string;
+  service?:string;
+  disponibilite?:string;
+  solde?:number
+
 
 }
 

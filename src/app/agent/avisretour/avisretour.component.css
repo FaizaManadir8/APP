@@ -71,6 +71,7 @@ th{
   }
   a{
     text-decoration: none;
+    text-align: center;
   }
 
   .nn{
@@ -84,4 +85,14 @@ text-align:center ;
   }
   .btnedit{
     color: #009B72;
+  }
+
+  .btnconsulter{
+    color: lightblue;
+  }
+  #fonc{
+    text-align: center;
+  }
+  i{
+    text-align: center;
   }

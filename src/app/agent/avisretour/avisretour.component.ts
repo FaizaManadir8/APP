@@ -4,9 +4,10 @@ import {MatDialog} from "@angular/material/dialog";
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { DeleteCongeComponent } from 'src/app/delete-conge/delete-conge.component';
-import { UpdateCongeComponent } from 'src/app/update-conge/update-conge.component';
 import { HttpClient } from '@angular/common/http';
 import { UpdateavisComponent } from 'src/app/updateavis/updateavis.component';
+import { ConsulteravisComponent } from '../consulteravis/consulteravis.component';
+import { Avis } from '../avis/avis.component';
 
 export interface ListeAvis {
   id: number;
@@ -80,6 +81,15 @@ export class AvisretourComponent implements OnInit {
       this.avis = avis;
     });
    }
+
+   voir(avis: Avis) {
+    const dialogRef = this.dialog.open(ConsulteravisComponent, {
+      width: '100%',
+      height:'inherit',
+      data: avis,
+    });
+  }
+   
 
 
 }

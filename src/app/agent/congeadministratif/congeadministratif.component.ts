@@ -10,7 +10,7 @@ export interface Conge {
   nombreDeJours: number;
   type: string;
   interimaire: string;
-  adresseConge: string;
+  adresseConge: string ;
   etat: string;
   id: number;
 }

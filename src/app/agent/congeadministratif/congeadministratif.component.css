@@ -12,16 +12,21 @@
     align-items: center;
     flex-direction:row-reverse ;
     background-color: white;
-    height: 540px;
+    height: inherit;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 0px 10px 50px -10px #d6d6d6;
 }
-.formulaire{
-    width: 100%;
+.formBox{
+    width: 90%;
+    margin-top: 10px;
+    padding: 50px;
+    justify-content: space-between;
     margin-right: 40px;
-    margin-left:40px ;
 }
+
+
+
 h3{
 font-size: 2em;
 color: #2e2e2e;
@@ -29,34 +34,31 @@ margin-bottom: 50px;
 text-align:center ;
 font-family: 'Playfair Display', serif;
 }
-form{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-}
+
 input{
+    width: 90%;
     margin: 10px 0;
     padding: 10px;
     border: none;
     outline: none;
     border-bottom: 2px solid #e4e4e4;
     transition: 0.2s;
+    color: #606060;
 }
+
 input:hover{
     border-bottom:2px solid #009B72;
 }
-.zone{
-    width: 42%;
-}
-button{
-    width: 192px;
-    height:60px ;
+
+.button{
+    width: 150px;
+    height:50px ;
     border-radius: 8px;
     border: none;
     background-color: #009B72;
     color: white;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 20px;
     cursor: pointer ;
     margin-top: 30px;
     outline: none;
@@ -68,10 +70,22 @@ button{
     outline: none;
     border-bottom: 2px solid #e4e4e4;
     transition: 0.2s;
-    width:42% ;
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
 }
 .type:hover{
     border-bottom:2px solid #009B72;
 
 }
 
+.inputBox{
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+label{
+    font-family: 'Playfair Display', serif;
+   color: #2e2e2e bold;
+}
