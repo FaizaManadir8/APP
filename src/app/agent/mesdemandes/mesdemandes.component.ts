@@ -6,6 +6,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { DeleteCongeComponent } from 'src/app/delete-conge/delete-conge.component';
 import { UpdateCongeComponent } from 'src/app/update-conge/update-conge.component';
+import { Conge } from '../congeadministratif/congeadministratif.component';
+import { ConsulterdemandeComponent } from '../consulterdemande/consulterdemande.component';
 
 export interface ListeConges {
   id: number;
@@ -77,6 +79,13 @@ deleteConge(conge:any){
    });
    this.conge = conge;
  });
-}
+} 
 
+voir(conge: Conge) {
+  const dialogRef = this.dialog.open(ConsulterdemandeComponent, {
+    width: '100%',
+    data: conge,
+  });
+}
+ 
 }
