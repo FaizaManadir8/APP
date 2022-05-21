@@ -3,11 +3,11 @@ import { MatTableDataSource } from '@angular/material/table';
 import {MatDialog} from "@angular/material/dialog";
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { DeleteCongeComponent } from 'src/app/delete-conge/delete-conge.component';
 import { HttpClient } from '@angular/common/http';
 import { UpdateavisComponent } from 'src/app/updateavis/updateavis.component';
 import { ConsulteravisComponent } from '../consulteravis/consulteravis.component';
 import { Avis } from '../avis/avis.component';
+import { DeleteavisComponent } from 'src/app/deleteavis/deleteavis.component';
 
 export interface ListeAvis {
   id: number;
@@ -68,7 +68,7 @@ export class AvisretourComponent implements OnInit {
    }
 
    deleteAvis(avis:any){
-    const dialogRef = this.dialog.open(DeleteCongeComponent, {
+    const dialogRef = this.dialog.open(DeleteavisComponent, {
       width: '450px',
       data: avis
     });
