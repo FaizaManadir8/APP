@@ -54,45 +54,5 @@ tbody tr:hover{
 
 
 
-.btn{
-  background-color: #009b72;
-  height: 30px;
-  color: bisque;
-  padding: .3rem;
-  border-radius: 20px;
-  place-items: center;
-  padding-bottom: 15px;
-  padding-top: 2px;
-  width: 200px;
-  text-decoration: none;
-  }
-
-.btn:hover{
- background-color: #fafdf2;
- color: black;
- border: 1px solid;
-}
-
-btn1c{
- margin-top: 200px;
-}
-.btn1{
-height: 40px;
-margin-top: 32.5%;
-margin-left: 75%;
-display: block;
-font-size: .95rem;
-background-color: #009b72;
-  height: 30px;
-  color: bisque;
-  padding: .3rem;
-  border-radius: 20px;
-  width: 150px;
-  padding-bottom: 15px;
-  padding-top: 5px;
-  border: none;
-}
-
-
 
 

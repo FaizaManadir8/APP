@@ -1,144 +1,106 @@
-.board{
-    width: 900px;
-    
-    background-color: #F5F5F5;
-    border-radius: 20px;
-    margin-top: 10%;
-    margin-left: 20px;
-    margin-right: 50px;
-    display: block;
-    margin-bottom: 100px;
-}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display&display=swap');
+table, th, td {
+    border: 1px solid lightgray;
 
-.search-icon{
-  margin-top: 18px;
-      width:30% ;
-      height: 60px;
-      border-radius: 30px;
-      position: relative;
-      float: right;
-      margin-right: 20px;
-      display: flex;
-     
   }
-  
+  table {
+    border-spacing: 10px;
+    color: whitesmoke;
+    height: 200px;
+    border-radius: 8px;
+  }
 
-  .input{
-
-    width: 100%;
-    height: 50%;
-    display: block;
-    border-radius: 30px;
-    padding-left: 20px;
-    font-size:16px ;
-    outline: none;
-    border: none;
+  td{
+      color:black;
     
+  }
+thead {
+    background-color:#009B72 ;
+    height:s
+}
+i{
+    padding-left: 8px;
+    padding-right: 8px;
+}
 
-}
-.button {
-    position: absolute;
-    right: 0;
-    top :0;
-    width: 40px;
-    height:50% ;
-    background:#009B72;
-    color: white;
-    border-radius:50%;
-    border: none;
-   
-}
-.av{
-  padding-top: 60px;
-  font-size: 2rem;
-  font-family: 'Playfair Display', serif;
- 
-  
-  margin-left: 70px;
-}
-table{
-    border-collapse: collapse ;
-    align-items: center;
-    
-    
+h2{
 
+    font-family: 'Playfair Display', serif;
 }
-.tdd{
-  place-items: center;
-  font-size: .95rem;
+
+th{
+  font-family:'Playfair Display', serif; 
+  color: aliceblue;
+  background-color: #009B72;
+  padding-left:20px ;
   
 
 }
 tr{
-    border-bottom:20px solid white;
-    border-radius: 60px;
-    
-     place-items: center;
-     align-items: center;
-   
-}
-
- 
-
-tbody tr td{
-    padding: 30px 30px;
+  border-bottom:10px solid white;
+  background-color: #F5F5F5;
 
 }
-tbody tr:hover{
-    background-color: #c9f1cc;
-    transition: 0.5s;
+tr:hover{
+  background-color: #B5DFB2;
 }
 
 
-
-.btn{
+.btn1{
+  height: 40px;
+  margin-top: 32.5%;
+  margin-left: 75%;
+  display: block;
+  font-size: .95rem;
   background-color: #009b72;
-  height: 30px;
-  color: bisque;
-  padding: .3rem;
-  border-radius: 20px;
-  place-items: center;
-  padding-bottom: 15px;
-  padding-top: 2px;
-  width: 200px;
+    height: 30px;
+    color: bisque;
+    padding: .3rem;
+    border-radius: 20px;
+    width: 150px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+    border: none;
+    text-decoration: none;
+  }
+  
+  .btn1:hover{
+  background-color: #10b489 ;
+  cursor: pointer;
+  box-shadow: 0 0 5px #10b489,
+              0 0 20px #10b489,        
+              0 0 60px #10b489,
+              0 0 150px #10b489                ;
+  }
+  a{
+    text-decoration: none;
   }
 
-.btn:hover{
- background-color: #fafdf2;
- color: black;
- border: 1px solid;
+  .nn{
+text-align:center ;
+  }
+  .mm{
+    text-align: center;
+  }
+ 
+
+  .supp{
+    background-color:#ff3761;
+  }
+  .Edit{
+    background-color: #B5DFB2;
+  }
+
+  .btnvoir{
+    background-color: lightblue;
+  }
+  #fonc{
+    text-align: center;
+  }
+  i{
+    text-align: center;
+  }
+a{
+  text-decoration: none;
+  color: white;
 }
-
-btn1c{
- margin-top: 200px;
-}
-.btn1{
-height: 40px;
-margin-top: 32.5%;
-margin-left: 75%;
-display: block;
-font-size: .95rem;
-background-color: #009b72;
-  height: 30px;
-  color: bisque;
-  padding: .3rem;
-  border-radius: 20px;
-  width: 150px;
-  padding-bottom: 15px;
-  padding-top: 5px;
-  border: none;
-}
-
-.btn1:hover{
-background-color: #10b489 ;
-cursor: pointer;
-box-shadow: 0 0 5px #10b489,
-            0 0 20px #10b489,        
-            0 0 60px #10b489,
-            0 0 150px #10b489                ;
-}
-
-
-
-
-
