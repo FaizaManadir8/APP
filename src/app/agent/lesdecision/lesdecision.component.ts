@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ConsulterdecisionComponent } from 'src/app/responsable/consulterdecision/consulterdecision.component';
+import { DecisionComponent } from '../decision/decision.component';
 
 export interface ListeDecision {
   id: number;
@@ -42,7 +43,7 @@ export class LesdecisionComponent implements OnInit {
   
   voirDecision(decision:any) {
 
-    const dialogRef = this.dialog.open(ConsulterdecisionComponent, {
+    const dialogRef = this.dialog.open(DecisionComponent, {
       width: '100%',
       height:'inherit',
       data: decision
