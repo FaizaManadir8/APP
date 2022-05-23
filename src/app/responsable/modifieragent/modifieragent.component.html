@@ -13,14 +13,14 @@
                         <div class="col-sm-6">
                             <div class="inputBox ">
                                 <label for="Ddp">Nom :</label>
-                                <input type="text" name="" class="input">
+                                <input type="text" name="nom" class="input" [(ngModel)]="data.nom">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="inputBox">
                                 <label for="Ddp">Prénom :</label>
-                                <input type="text" name="" class="input">
+                                <input type="text" name="prenom" class="input" [(ngModel)]="data.prenom">
                             </div>
                         </div>
                     </div>
@@ -29,14 +29,14 @@
                         <div class="col-sm-6">
                             <div class="inputBox">
                                 <label for="Ddp">Matricule :</label>
-                                <input type="text" name="" class="input">
+                                <input type="text" name="matricule" class="input" [(ngModel)]="data.matricule">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="inputBox">
                                 <label for="Ddp">Téléphone :</label>
-                                <input type="text" name="" class="input">
+                                <input type="text" name="telephone" class="input" [(ngModel)]="data.telephone">
                             </div>
                         </div>
                     </div>
@@ -45,14 +45,14 @@
                         <div class="col-sm-6">
                             <div class="inputBox">
                                 <label for="Ddp">Adresse :</label>
-                                <input type="text" name="" class="input">
+                                <input type="text" name="adresse" class="input" [(ngModel)]="data.adresse">
                             </div>
                             </div>
 
                             <div class="col-sm-6">
                                 <div class="inputBox">
                                     <label for="Ddp">Grade :</label>
-                                    <input type="text" name="" class="input">
+                                    <input type="text" name="grade" class="input" [(ngModel)]="data.grade">
                                 </div>
                             </div>
                             </div>
@@ -61,14 +61,14 @@
                         <div class="col-sm-6">
                             <div class="inputBox">
                                 <label for="Ddp">Fonction :</label>
-                                <input type="text" name="" class="input">        
+                                <input type="text" name="fonction" class="input" [(ngModel)]="data.fonction">        
                             </div>
                             </div>
                              
                             <div class="col-sm-6">
                                 <div class="inputBox">
                                     <label for="Ddp">Service :</label>
-                                    <input type="text" name="" class="input">
+                                    <input type="text" name="service" class="input" [(ngModel)]="data.service">
                                     
                                 </div>
                              </div>
@@ -76,8 +76,12 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <input type="submit" name="" class="button" value="Modifier">
+                            <div mat-dialog-actions>
+                                <button mat-button (click)="onNoClick()" class="annuler">Annuler</button>
+                                <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="modifier">Modifier</button>
+                              </div>
                         </div>
+                        
                     </div>
         
             </form>
