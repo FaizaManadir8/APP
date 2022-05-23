@@ -20,7 +20,7 @@ input{
     outline: none;
     border-bottom: 2px solid #e4e4e4;
     transition: 0.2s;
-    color:lightgray;
+    color:rgb(19, 17, 17);
 }
 h1{
     padding-top: 40px;

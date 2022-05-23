@@ -6,6 +6,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Conge } from 'src/app/agent/congeadministratif/congeadministratif.component';
 import { ConsulterdemanComponent } from '../consulterdeman/consulterdeman.component';
+import { ConsulterdecisionComponent } from '../consulterdecision/consulterdecision.component';
+import { Decision } from '../ajouterdecision/ajouterdecision.component';
 export interface ListeConges {
   id: number;
   nombreDeJours: number;
@@ -55,5 +57,6 @@ export class LesdemandesComponent implements OnInit {
       data: conge,
     });
   }
-   
 }
+
+
