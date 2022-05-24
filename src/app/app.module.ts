@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -59,7 +60,6 @@ import { UpdatedecisionComponent } from './updatedecision/updatedecision.compone
 import { DeletdecisionComponent } from './deletdecision/deletdecision.component';
 import { UpdateavisComponent } from './updateavis/updateavis.component';
 import { DeleteavisComponent } from './deleteavis/deleteavis.component';
-
 
 
 @NgModule({

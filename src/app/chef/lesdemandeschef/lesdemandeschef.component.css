@@ -1,117 +1,109 @@
-h1{
-   
-    padding-top: 5px;
-    text-align: center;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-    font-size: 30px;   
-    color: #25a058;
-}
-h2{
-    margin: 45px;
-}
-.main{
-    position: absolute;
-    top: 14%;
-    left: 80%;
-    transform: translate(-50%,-50%);
-}
- input{
-    border: 3px solid #25a058;
-    height: 40px;
-    width: 300px;
-    border-radius: 50px;
-    padding: 0px 10px;
-    color: rgb(56, 57, 59);
-}
-.btn a {
-    color: white;
-    min-width: 30px;
-    height: 30px;
-    background: #25a058;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 15px; 
-    margin-top: -49px;
-    margin-left: 250px;
- 
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display&display=swap');
+table, th, td {
+    border: 1px solid lightgray;
 
-    
-}
-.board{
-    width: 94%;
-    margin: 50px 0 50px 50px;
-    overflow: auto;
-    background-color: #F5F5F5;
+  }
+  table {
+    border-spacing: 10px;
+    color: whitesmoke;
+    height: 200px;
     border-radius: 8px;
+  }
+
+  td{
+      color:black;
+    
+  }
+thead {
+    background-color:#009B72 ;
+    height:s
 }
-.board img{
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 15px;
+i{
+    padding-left: 8px;
+    padding-right: 8px;
 }
-.board h5{
-    font-weight: 600;
-    font-size: 14px;
+
+h2{
+
+    font-family: 'Playfair Display', serif;
 }
-.board p{
-    font-weight: 400;
-    font-size: 13px;
-    color:#787d8d;
-}
-.board.people{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: start;
-}
-table{
-    border-collapse: collapse ;
+
+th{
+  font-family:'Playfair Display', serif; 
+  color: aliceblue;
+  background-color: #009B72;
+  padding-left:20px ;
+  
 
 }
 tr{
-    border-bottom:20px solid white;
-    border-radius: 40px;
-}
- 
-thead td{
-    font-size:14px ;
-    text-transform: uppercase;
-    font-weight: 400;
-    background-color:#E8E8E8;
-    text-align: start;
-    padding:15px ;
+  border-bottom:10px solid white;
+  background-color: #F5F5F5;
 
 }
-tbody tr td{
-    padding: 10px 15px;
-
-}
-tbody tr:hover{
-    background-color: #d7fada;
-    transition: 0.5s;
+tr:hover{
+  background-color: #B5DFB2;
 }
 
-.Date input {
-    width: 50%;
-    margin: 10px 0;
-    padding: 10px;
+
+.btn1{
+  height: 40px;
+  margin-top: 32.5%;
+  margin-left: 75%;
+  display: block;
+  font-size: .95rem;
+  background-color: #009b72;
+    height: 30px;
+    color: bisque;
+    padding: .3rem;
+    border-radius: 20px;
+    width: 150px;
+    padding-bottom: 15px;
+    padding-top: 5px;
     border: none;
-    outline: none;
-    border-bottom: 2px solid #e4e4e4;
-    transition: 0.2s;
-    color:rgb(46, 45, 45);
-}
-.Consulter a {
     text-decoration: none;
-    font-size: 14px;
-    color: #009B72 ;
-    font-weight: 600;
-}
+  }
+  
+  .btn1:hover{
+  background-color: #10b489 ;
+  cursor: pointer;
+  box-shadow: 0 0 5px #10b489,
+              0 0 20px #10b489,        
+              0 0 60px #10b489,
+              0 0 150px #10b489                ;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+
+  .nn{
+text-align:center ;
+  }
+  .mm{
+    text-align: center;
+  }
+ 
+  .accept{
+    background-color:#ff3761;
+    margin-left: 8%;
+  }
+  .refuse{
+    background-color: #B5DFB2;
+    margin-left: 18%;
+  }
+
+  .voir{
+    background-color: rgb(5, 170, 162);
+    margin-left: 8%;
+  }
+  #fonc{
+    text-align: center;
+  }
+  i{
+    text-align: center;
+  }
 a{
-    text-decoration: none;
+  text-decoration: none;
+  color: rgb(59, 58, 58);
 }

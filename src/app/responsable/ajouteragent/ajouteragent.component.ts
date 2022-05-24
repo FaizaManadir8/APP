@@ -14,7 +14,8 @@ export interface Personne {
   etat: string;
   adresse:string
   grade: string;
-  id :number
+  id :number;
+  image :string;
   cin :string
 }
 
@@ -77,6 +78,7 @@ export class AjouteragentComponent implements OnInit {
       telephone: ['', Validators.required],
       adresse: ['', Validators.required],
       grade: ['', Validators.required],
+      image: ['', Validators.required],
       id: this.compte.id, 
     });
   }

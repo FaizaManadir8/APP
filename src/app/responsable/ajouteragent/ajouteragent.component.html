@@ -63,7 +63,7 @@
                                 <label for="Ddp">Fonction :</label>
                                 <input type="text" name="" class="input" formControlName="fonction" required="required">        
                             </div>
-                            </div>
+                           </div> 
                              
                             <div class="col-sm-6">
                                 <div class="inputBox">
@@ -75,9 +75,18 @@
                              </div>    
 
                     <div class="row">
+
+                        <div class="col-sm-6">
+                            <div class="inputBox">
+                                <label for="Ddp"> Photo :</label>
+                                <input type="file" name="image" class="input" formControlName="image" required="required">
+                                
+                            </div>
+                         </div>
                         <div class="col-sm-12">
                             <input type="submit" name="" class="button" value="Ajouter">
                         </div>
+                       
                     </div>
                     <br />
                     <p *ngIf="isPassed" style="color: green">{{ success }}</p>

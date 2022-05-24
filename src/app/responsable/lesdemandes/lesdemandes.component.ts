@@ -4,6 +4,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Conge } from 'src/app/agent/congeadministratif/congeadministratif.component';
+import { ConsulterdemanComponent } from '../consulterdeman/consulterdeman.component';
 import { ConsulterdecisionComponent } from '../consulterdecision/consulterdecision.component';
 import { Decision } from '../ajouterdecision/ajouterdecision.component';
 export interface ListeConges {
@@ -46,11 +48,15 @@ export class LesdemandesComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-  voir(decision: Decision) {
-    const dialogRef = this.dialog.open(ConsulterdecisionComponent, {
+
+  
+  voir(conge: Conge) {
+    const dialogRef = this.dialog.open(ConsulterdemanComponent, {
       width: '100%',
       height:'inherit',
-      data: decision,
+      data: conge,
     });
   }
 }
+
+
