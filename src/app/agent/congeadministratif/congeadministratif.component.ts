@@ -13,6 +13,7 @@ export interface Conge {
   adresseConge: string;
   etat: string;
   id: number;
+  compte_id: number;
 }
 @Component({
   selector: 'app-congeadministratif',
@@ -20,7 +21,6 @@ export interface Conge {
   styleUrls: ['./congeadministratif.component.css'],
 })
 export class CongeadministratifComponent implements OnInit {
-
   congeForm!: FormGroup;
   error: string | undefined;
   success!: string;
@@ -46,7 +46,7 @@ export class CongeadministratifComponent implements OnInit {
       this.congeForm.value
     );
     conge.subscribe(
-      (conge: any) => {
+      (conge) => {
         console.log('congé', conge);
         this.isPassed = true;
         this.success = 'congé crée avec succès';
@@ -58,11 +58,7 @@ export class CongeadministratifComponent implements OnInit {
       }
     );
   }
-  // getUserLoggedIn() {
-  //   if (localStorage.getItem('user')) {
-  //     this.compte = JSON.parse(localStorage.getItem('user')!);
-  //   }
-  // }
+
   private createForm() {
     if (localStorage.getItem('user')) {
       this.compte = JSON.parse(localStorage.getItem('user')!);
@@ -78,7 +74,7 @@ export class CongeadministratifComponent implements OnInit {
       adresseConge: ['', Validators.required],
       // interimaire: ['', Validators.required],
       etat: 'en attente',
-      id: this.compte.id, 
+      compte_id: this.compte.id,
     });
   }
 }

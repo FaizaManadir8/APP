@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Conge } from 'src/app/agent/congeadministratif/congeadministratif.component';
+import { Compte } from 'src/app/login/login.component';
 import { ConsulterdemandechefComponent } from '../consulterdemandechef/consulterdemandechef.component';
 // import { ListeConges } from 'src/app/agent/mesdemandes/mesdemandes.component';
 interface ListeConges {
@@ -37,6 +38,8 @@ export class LesdemandeschefComponent implements OnInit {
   dataSource!: MatTableDataSource<ListeConges>;
   conge;
   i;
+  agent!: Compte;
+  solde;
   clickedAccept = new Array();
   clickedRefuse = new Array();
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
@@ -68,6 +71,32 @@ export class LesdemandeschefComponent implements OnInit {
   accept(conge: Conge) {
     // console.log('conge', conge, 'i', i);
     this.httpClient
+      .get(`http://localhost:8080/comptes/get/${conge.compte_id}`)
+      .subscribe((result) => {
+        this.agent = result;
+        console.log(this.agent.solde);
+        this.solde = this.agent.solde! - conge.nombreDeJours;
+        console.log(this.solde);
+        this.agent.solde = this.solde;
+        console.log(this.agent);
+        // result=this.agent
+        console.log(result);
+        
+        this.httpClient
+          .put('http://localhost:8080/comptes/accept', result)
+          // diminuer le solde de l'agent solde - {nombre de jours}
+          // rendre l'agent indiponible
+          .subscribe(
+            () => {
+              console.log("diminution du solde de l'agent");
+            },
+            (error1) => {
+              console.log('error', error1);
+              this.error = error1.error.message;
+            }
+          );
+      });
+    this.httpClient
       .put('http://localhost:8080/conges/accepter', conge)
       .subscribe(
         (result) => {
@@ -84,7 +113,6 @@ export class LesdemandeschefComponent implements OnInit {
           this.error = error1.error.message;
         }
       );
-      
   }
 
   refuse(conge: Conge) {
@@ -104,7 +132,7 @@ export class LesdemandeschefComponent implements OnInit {
           console.log('error', error1);
           this.error = error1.error.message;
         }
-      );  
+      );
   }
   voir(conge: Conge) {
     const dialogRef = this.dialog.open(ConsulterdemandechefComponent, {

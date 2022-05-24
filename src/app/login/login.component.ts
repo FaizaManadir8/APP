@@ -15,6 +15,7 @@ export interface Compte {
   telephone?:string;
   cin?:string;
   mail?:string;
+  solde?:number;
 
 }
 

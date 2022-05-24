@@ -143,6 +143,6 @@
  </table>
  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 </div>
-<h3 class="text-center"  style="color:green;" *ngIf="isAccepted">Vous Avez Accepté l'événement</h3>
+<h3 class="text-center"  style="color:green;" *ngIf="isAccepted">Vous Avez Accepté l'événement, et le solde de l'agent {{agent.nom}} {{agent.prenom}} a changé <br> son nouveau solde est {{agent.solde}}</h3>
 <h3 class="text-center"  style="color:red;" *ngIf="isRefused">Vous Avez refusé l'événement</h3>
 <div class="clear"></div>
