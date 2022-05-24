@@ -42,7 +42,7 @@ error
           this.clickedRefuse[conge.id] = false;
           this.isAccepted = true;
           this.isRefused = false;
-          this.success = "Vous avez refusé l'événement " + conge.id;
+          this.success = "Vous avez accepté le congé " + conge.id;
           this.ngOnInit();
         },
         (error1) => {
@@ -58,7 +58,7 @@ error
       .subscribe(
         (result) => {
           this.conge = result;
-          this.success = "Vous avez refusé l'événement " + conge.id;
+          this.success = "Vous avez refusé le congé" + conge.id;
           this.isAccepted = false;
           this.isRefused = true;
           this.clickedRefuse[conge.id] = true;
