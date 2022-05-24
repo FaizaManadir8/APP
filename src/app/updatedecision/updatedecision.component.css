@@ -1,0 +1,25 @@
+input:hover{
+    border-bottom:2px solid #009B72;
+}
+input{
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e4e4e4;
+    transition: 0.2s;
+    color:lightgray;
+}
+label{
+    font-family: 'Playfair Display', serif;
+    color: bold lightgray;
+
+}
+.annuler{
+    background-color: #ff3761;
+    color: white;
+}
+.modifier{
+    background-color:#B5DFB2 ;
+    color:white;
+}

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject} from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Decision } from '../ajouterdecision/ajouterdecision.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-consulterdecision',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsulterdecisionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<ConsulterdecisionComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Decision, private httpClient: HttpClient) { }
 
   ngOnInit(): void {
   }
 
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }

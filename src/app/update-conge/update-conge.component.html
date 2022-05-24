@@ -1,22 +1,29 @@
+
 <div mat-dialog-content>
     <mat-form-field>
-      <input matInput [(ngModel)]="data.id" placeholder="id">
+      <label for="id">Id :&nbsp;</label>
+      <input matInput [(ngModel)]="data.id" placeholder="id" id="id">
+    </mat-form-field>
+    &nbsp;&nbsp;
+    <mat-form-field>
+      <label for="nombrejour">nombrejour:&nbsp;</label>
+      <input matInput [(ngModel)]="data.nombreDeJours" placeholder="nombreDeJours" id="nombrejour">
     </mat-form-field>
     <mat-form-field>
-      <input matInput [(ngModel)]="data.nombreDeJours" placeholder="nombreDeJours">
+      <label for="datedebut">Date debut :&nbsp;</label>
+      <input matInput [(ngModel)]="data.dateDebut" placeholder="dateDebut" id="datedebut">
     </mat-form-field>
     <mat-form-field>
-      <input matInput [(ngModel)]="data.dateDebut" placeholder="dateDebut">
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput [(ngModel)]="data.dateFin" placeholder="dateFin">
+      <label for="dateFin"> Date retour :&nbsp;</label>
+        <input matInput [(ngModel)]="data.dateFin" placeholder="dateFin" id="dateFin">
       </mat-form-field>
     <mat-form-field>
-        <input matInput [(ngModel)]="data.dateDemande" placeholder="dateDemande">
+      <label for="datedemande">Date demande :&nbsp;</label>
+        <input matInput [(ngModel)]="data.dateDemande" placeholder="dateDemande" id="datedemande">
       </mat-form-field>
    
   </div> 
   <div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">Annuler</button>
-    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Modifier</button>
+    <button mat-button (click)="onNoClick()" class="annuler">Annuler</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="modifier">Modifier</button>
   </div>

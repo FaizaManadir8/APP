@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -55,7 +56,10 @@ import { DeleteCongeComponent } from './delete-conge/delete-conge.component';
 import { UpdateCongeComponent } from './update-conge/update-conge.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { UpdatedecisionComponent } from './updatedecision/updatedecision.component';
+import { DeletdecisionComponent } from './deletdecision/deletdecision.component';
+import { UpdateavisComponent } from './updateavis/updateavis.component';
+import { DeleteavisComponent } from './deleteavis/deleteavis.component';
 
 
 @NgModule({
@@ -96,7 +100,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ConsulterdemandechefComponent,
     DeleteCongeComponent,
     UpdateCongeComponent,
-
+    UpdatedecisionComponent,
+    DeletdecisionComponent,
+    UpdateavisComponent,
+    DeleteavisComponent,
 
 
   ],

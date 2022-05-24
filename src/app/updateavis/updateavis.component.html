@@ -1,0 +1,24 @@
+<div mat-dialog-content>
+    <mat-form-field>
+      <label for="id">Id :&nbsp;</label>
+      <input matInput [(ngModel)]="data.id" placeholder="id" id="id">
+    </mat-form-field>
+    &nbsp;&nbsp;
+    <mat-form-field>
+      <label for="datedebut">Date debut :&nbsp;</label>
+      <input matInput [(ngModel)]="data.dateDebut" placeholder="dateDebut" id="datedebut">
+    </mat-form-field>
+    <mat-form-field>
+      <label for="dateReprise"> Date Reprise :&nbsp;</label>
+        <input matInput [(ngModel)]="data.dateReprise" placeholder="dateReprise" id="dateReprise" >
+      </mat-form-field>
+    <mat-form-field>
+      <label for="datedemande">Date Retour :&nbsp;</label>
+        <input matInput [(ngModel)]="data.dateDemande" placeholder="dateRetour" id="datedemande">
+      </mat-form-field>
+   
+  </div> 
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()" class="annuler">Annuler</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial class="modifier">Modifier</button>
+  </div>

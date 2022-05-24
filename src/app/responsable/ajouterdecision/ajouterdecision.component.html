@@ -1,58 +1,60 @@
 <div class="formulaire">
     <h1> Décision de congé</h1>
-    <form action="#" method="post">
+    <form (ngSubmit)="newDecision()" [formGroup]="decisionForm">
         <label for="matricule">Matricule :&nbsp;</label>
-        <input required=""  type="text" name="matricule" class="zone" id="matricule" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input required=""  type="text" name="matricule" class="zone" id="matricule" formControlName="matricule"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
 
         <label for="prenom">Prénom : &nbsp;</label>
-        <input required="" type="text" name="prenom" class="zone" id="prenom" ><br>
+        <input required="" type="text" name="prenom" class="zone" id="prenom" formControlName="prenom"><br>
 
         <label for="nom">Nom :&nbsp; &nbsp; &nbsp; &nbsp;</label>
-        <input required="" type="text" name="nom" class="zone" id="nom" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input required="" type="text" name="nom" class="zone" id="nom" formControlName="nom"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        
 
         <label for="fonction">Fonction: &nbsp;</label>
-        <input  required="" type="text" name="fonction" class="zone" id="fonction" ><br>
+        <input  required="" type="text" name="fonction" class="zone" id="fonction" formControlName="fonction"><br>
 
         <label for="Nj"> Nombre de jours:</label>
-        <input type="number" name="nombre de jours"  class="zone1" id="Nj" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="number" name="nombre de jours"  class="zone1" id="Nj" formControlName="nombreDeJours"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      
         <label for="grade"> Grade: </label>&nbsp;
-        <input type="text" name="grade"  class="zone" id="grade" /><br>
+        <input type="text" name="grade"  class="zone" id="grade" formControlName="grade"><br>
 
         <label for="dateD">Date de demande:&nbsp;</label>
-        <input required="" type="Date" name="Date" class="zone1" id="dateD" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input required="" type="Date" name="Date" class="zone1" id="dateD" formControlName="dateDemande"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
 
         <label for="email">Email :&nbsp;</label>
-        <input required=""  type="email" name="email" class="zone" id="email" ><br>
+        <input required=""  type="email" name="email" class="zone" id="email" formControlName="email"><br>
 
         <label for="Ddp">date de départ:</label>
-        <input  required="" type="date" name="datedepart" class="zone2" id="Ddp" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input  required="" type="date" name="datedepart" class="zone2" id="Ddp" formControlName="dateDepart"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      
         
 
         <label for="telephone">Téléphone : &nbsp;</label>
-        <input required="" type="text" name="telephone" class="zone" id="telephone" ><br>
+        <input required="" type="text" name="telephone" class="zone" id="telephone" formControlName="telephone"><br>
 
         <label for="Dr">date de retour:</label>
-        <input  required="" type="date" name="dateretour" class="zone2" id="Dr" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input  required="" type="date" name="dateretour" class="zone2" id="Dr" formControlName="dateRetour">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
         
         <label for="TC">Type congé :</label>
-        <input required="" type="text" name="typeconge" class="zone" id="TC" ><br>
+        <input required="" type="text" name="typeconge" class="zone" id="TC" formControlName="type"><br>
 
         <label for="Interimaire"> Interimaire : </label>
-        <input type="text" name="Interimaire" required="" class="wd" class="zone" id="Interimaire" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="Interimaire" required="" class="wd" class="zone" id="Interimaire" formControlName="interimaire">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
         <label for="Etat">Etat :</label>
-        <input required="" type="text" name="Etat" class="zone" id="Etat" ><br>
+        <input required="" type="text" name="Etat" class="zone" id="Etat" formControlName="etat"><br>
 
         <label for="adresse"> Adresse : </label>
-        <input type="text" name="Adresse" required="" class="wd" id="adresse" />
+        <input type="text" name="Adresse" required="" class="wd" id="adresse" formControlName="adresseConge">
         
-        
+        <br />
+        <p *ngIf="isPassed" style="color: green">{{ success }}</p>
+        <p *ngIf="!isPassed" style="color: red">{{ error }}</p>
 
        
         <br>
@@ -64,9 +66,9 @@
         &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp; 
         
+        
         <button class="Accepter">Envoyer</button>
         
     </form>
 
 </div>
-

@@ -10,22 +10,24 @@ export interface Compte {
   login?: string;
   privilege?: string;
   password?: string;
-  nom?:string;
-  prenom?:string;
-  telephone?:string;
-  cin?:string;
-  mail?:string;
-  solde?:number;
-
+  nom?: string;
+  prenom?: string;
+  telephone?: string;
+  cin?: string;
+  mail?: string;
+  solde?: number;
+  grade?: string;
+  fonction?: string;
+  service?: string;
+  disponibilite?: string;
 }
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-
   error: string | undefined;
   loginForm!: FormGroup;
   isLoading = false;
@@ -37,7 +39,7 @@ export class LoginComponent implements OnInit {
     private httpClient: HttpClient,
     private loginService: LoginService
   ) {
-      this.createForm(); 
+    this.createForm();
   }
   faCoffee = faCoffee;
 
@@ -77,5 +79,4 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
-
 }

@@ -1,61 +1,120 @@
 <section id="appointmant">
   <div class="container">
-    <div class="formulaire">
-      <h3>Congé administratif</h3>
+    <div class="formBox">
       <form (ngSubmit)="newConge()" [formGroup]="congeForm">
-        <input
-          required=""
-          type="date"
-          placeholder="Date demande"
-          class="zone"
-          formControlName="dateDemande"
-        />
-        <select formControlName="type" class="type">
-          <option value="normal">Type de congé</option>
-          <option value="normal">Normal</option>
-          <option value="autorisation absence">Autorisation d'absence</option>
-        </select>
-        <input
-          required=""
-          type="date"
-          placeholder="Date départ"
-          class="zone"
-          formControlName="dateDebut"
-        />
-        <input
-          required=""
-          type="date"
-          placeholder="Date retour"
-          class="zone"
-          formControlName="dateFin"
-        />
-        <input
-          type="number"
-          name="nombrejours"
-          required=""
-          placeholder="Nombre de Jours"
-          class="zone"
-          formControlName="nombreDeJours"
-        />
-        <input
-          type="text"
-          name="AdresseC"
-          required=""
-          placeholder="Adresse durant le congé"
-          class="zone"
-          formControlName="adresseConge"
-        />
-        <select formControlName="interimaire" class="type">
-          <option value="normal">Interimaire</option>
-          <option value="normal"></option>
-          <option value="autorisation absence"></option>
-        </select>
+              <div class="row">
+                  <div class="col-sm-12">
+                    <h3>Congé administratif</h3>
+                  </div>
+              </div>
 
-        <input
-          type="submit"
-          name="enregistrer"
-          class="btn btn-dark lg text-center"
+              <div class="row">
+                  <div class="col-sm-6">
+                      <div class="inputBox ">
+                        <label id="DD" > Date demande :</label>
+                        <input
+                          required=""
+                          type="date"
+                          placeholder="Date demande"
+                          class="zone"
+                          id="DD"
+                          formControlName="dateDemande"
+                        />
+                      </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                      <div class="inputBox">
+                        <label > Type :</label>
+                        <select formControlName="type" class="type">
+                          <option value="normal">Type de congé</option>
+                          <option value="normal">Normal</option>
+                          <option value="autorisation absence">Autorisation d'absence</option>
+                        </select>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-sm-6">
+                      <div class="inputBox">
+                        <label for="Dp" > Date départ :</label>
+<input required=""  type="date"  id="Dp"  placeholder="Date départ" class="zone" formControlName="dateDebut"
         />
+                      </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                      <div class="inputBox">
+                        <label for="DR" > Date retour :</label>
+                        <input
+                          required=""
+                          type="date"
+                          placeholder="Date retour"
+                          class="zone"
+                          id="DR"
+                          formControlName="dateFin"
+                        />
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-sm-6">
+                      <div class="inputBox">
+                        <label for="NJ" > Nombre jours :</label>
+                        <input
+                          type="number"
+                          name="nombrejours"
+                          required=""
+                          placeholder="Nombre de Jours"
+                          class="zone"
+                          id="NJ"
+                          formControlName="nombreDeJours"
+                        />
+                      </div>
+                      </div>
+
+                      <div class="col-sm-6">
+                          <div class="inputBox">
+                            <label for="adresse" > Adresse de conge:</label>
+                            <input
+                              type="text"
+                              name="AdresseC"
+                              required=""
+                              placeholder="Adresse durant le congé"
+                              class="zone"
+                              id="adresse"
+                              formControlName="adresseConge"
+                            />
+                          </div>
+                      </div>
+                      </div>
+
+              <div class="row">
+                  <div class="col-sm-6">
+                      <div class="inputBox">
+                        <label>Interimaire:</label>
+                        <select class="type" formControlName="interimaire">
+                          <option value="normal">Interimaire</option>
+                          <option value="normal"></option>
+                          <option value="autorisation absence"></option>
+                        </select>
+                      </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="inputBox">
+                          <input
+                          type="submit"
+                          name="enregistrer"
+                          class="button"
+                        />
+                            
+                        </div>
+                     </div>
+                </div>            
+
+       
         <br />
         <p *ngIf="isPassed" style="color: green">{{ success }}</p>
         <p *ngIf="!isPassed" style="color: red">{{ error }}</p>

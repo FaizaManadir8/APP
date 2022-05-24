@@ -2,69 +2,69 @@
     <h1>Decision congé</h1>
     <form action="#" method="post">
         <label for="matricule">Matricule :&nbsp;</label>
-        <input required=""  type="text" name="matricule" class="zone" id="matricule"  readonly="readonly">
+        <input required=""  type="text" name="matricule" class="zone" id="matricule"  readonly="readonly" [(ngModel)]="data.matricule">
         &nbsp;&nbsp;&nbsp;&nbsp;
 
         <label for="prenom">Prénom : &nbsp;</label>
-        <input required="" type="text" name="prenom" class="zone" id="prenom"  readonly="readonly" >
+        <input required="" type="text" name="prenom" class="zone" id="prenom"  readonly="readonly" [(ngModel)]="data.prenom">
         <br>
 
         <label for="nom">Nom :&nbsp; &nbsp; &nbsp; &nbsp;</label>
-        <input required="" type="text" name="nom" class="zone" id="nom"  readonly="readonly" >
+        <input required="" type="text" name="nom" class="zone" id="nom"  readonly="readonly" [(ngModel)]="data.nom">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
 
         <label for="fonction">Fonction: &nbsp;</label>
-        <input  required="" type="text" name="fonction" class="zone" id="fonction"  readonly="readonly" >
+        <input  required="" type="text" name="fonction" class="zone" id="fonction"  readonly="readonly" [(ngModel)]="data.fonction">
         <br>
 
         <label for="Nj"> Nombre de jours:</label>
-        <input type="number" name="nombre de jours"  class="zone1" id="Nj"  readonly="readonly" />
+        <input type="number" name="nombreDeJours"  class="zone1" id="Nj"  readonly="readonly" [(ngModel)]="data.nombreDeJours">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 
         <label for="grade"> Grade: &nbsp;&nbsp;&nbsp; &nbsp;</label>
-        <input type="text" name="grade"  class="zone" id="grade" />
+        <input type="text" name="grade"  class="zone" id="grade" [(ngModel)]="data.grade">
         <br>
 
         <label for="dateD">Date de demande:&nbsp;</label>
-        <input required="" type="Date" name="Date" class="zone1" id="dateD"  readonly="readonly" >
+        <input required="" type="Date" name="dateDemande" class="zone1" id="dateD"  readonly="readonly" [(ngModel)]="data.dateDemande" >
         &nbsp;&nbsp;&nbsp;&nbsp;
         
 
         <label for="email">Email :&nbsp; &nbsp;&nbsp;&nbsp;</label>
-        <input required=""  type="email" name="email" class="zone" id="email"  readonly="readonly" >
+        <input required=""  type="email" name="email" class="zone" id="email"  readonly="readonly" [(ngModel)]="data.email">
         <br>
 
         <label for="Ddp">date de départ:</label>
-        <input  required="" type="date" name="datedepart" class="zone1" id="Ddp"  readonly="readonly" >
+        <input  required="" type="date" name="dateDepart" class="zone1" id="Ddp"  readonly="readonly" [(ngModel)]="data.dateDepart">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     
         <label for="telephone">Téléphone: &nbsp;</label>
-        <input required="" type="text" name="telephone" class="zone" id="telephone"  readonly="readonly" >
+        <input required="" type="text" name="telephone" class="zone" id="telephone"  readonly="readonly" [(ngModel)]="data.telephone">
         <br>
 
         <label for="Dr">date de retour:</label>
-        <input  required="" type="date" name="dateretour" class="zone1" id="Dr"  readonly="readonly" >
+        <input  required="" type="date" name="dateRetour" class="zone1" id="Dr"  readonly="readonly" [(ngModel)]="data.dateRetour">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
         
         <label for="TC">Type congé :</label>
-        <input required="" type="text" name="typeconge" class="zone" id="TC"  readonly="readonly" >
+        <input required="" type="text" name="type" class="zone" id="TC"  readonly="readonly" [(ngModel)]="data.type">
 
     <br>
     <label for="Interimaire"> Interimaire : </label>
-        <input type="text" name="Interimaire" required="" class="zone" id="Interimaire" readonly="readonly" />
+        <input type="text" name="interimaire" required="" class="zone" id="Interimaire" readonly="readonly" [(ngModel)]="data.interimaire">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
         
 
         <label for="Etat"> Etat: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-        <input type="text" name="Etat" required="" class="zone" id="Etat" readonly="readonly" />
+        <input type="text" name="etat" required="" class="zone" id="Etat" readonly="readonly" [(ngModel)]="data.etat"/>
 
     <br>
 
         <label for="adresse"> Adresse : &nbsp;&nbsp;&nbsp; </label>
-        <input type="text" name="Adresse" required="" class="wd" id="adresse"  readonly="readonly" />
+        <input type="textConge" name=" adresseConge" required="" class="wd" id="adresse"  readonly="readonly" [(ngModel)]="data.adresseConge"/>
         <br>
         
         
