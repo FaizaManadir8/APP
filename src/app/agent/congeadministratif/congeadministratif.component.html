@@ -96,9 +96,7 @@
                       <div class="inputBox">
                         <label>Interimaire:</label>
                         <select class="type" formControlName="interimaire">
-                          <option value="normal">Interimaire</option>
-                          <option value="normal"></option>
-                          <option value="autorisation absence"></option>
+                          <option *ngFor="let i of interimaire" [value]="i.id" >{{i.nom}} {{i.prenom}}</option>
                         </select>
                       </div>
                       </div>

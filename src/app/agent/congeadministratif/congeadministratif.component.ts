@@ -10,7 +10,7 @@ export interface Conge {
   nombreDeJours: number;
   type: string;
   interimaire: string;
-  adresseConge: string ;
+  adresseConge: string;
   etat: string;
   id: number;
   compte_id: number;
@@ -27,6 +27,7 @@ export class CongeadministratifComponent implements OnInit {
   isPassed: boolean = false;
   id!: number;
   compte!: Compte;
+  interimaire!: Compte[];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -37,6 +38,17 @@ export class CongeadministratifComponent implements OnInit {
 
   ngOnInit(): void {
     //call available interimaires
+    this.httpClient
+      .get<Compte[]>('http://localhost:8080/comptes/get')
+      .subscribe(
+        (res) => {
+          this.interimaire = res;
+        },
+        (error1) => {
+          console.log('error', error1);
+          this.error = error1.error.message;
+        }
+      );
   }
 
   newConge() {
@@ -72,7 +84,7 @@ export class CongeadministratifComponent implements OnInit {
       nombreDeJours: ['', Validators.required],
       type: ['', Validators.required],
       adresseConge: ['', Validators.required],
-      // interimaire: ['', Validators.required],
+      interimaire: ['', Validators.required],
       etat: 'en attente',
       compte_id: this.compte.id,
     });
